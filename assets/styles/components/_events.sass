@@ -1,0 +1,788 @@
+body.dark
+  article.type-tribe_events
+    border-bottom: 1px solid #696969
+    .post-header
+      .post-category
+        color: $c-4
+    .post-title
+        color: $c-4 !important
+    .post-meta
+      .post-date
+        color: $c-secondary
+    .post-excerpt
+      color: #A9A9A9 !important
+
+
+
+body:not(.dark) article.type-tribe_events
+  border-bottom: 1px solid #696969
+  .post-header
+    .post-category
+      color: $c-4
+  .post-title
+      color: $c-1
+  .post-meta
+    .post-date
+      color: $c-secondary
+  .post-excerpt
+    color: $c-1
+
+.news-section
+  margin: 14rem 0
+
+article.type-tribe_events
+  padding-bottom: 5rem
+  margin-bottom: 5rem
+
+  .post-header
+    margin-bottom: 2rem
+    .tribe-events-sale
+      background-color: #12611A
+      color: $c-4
+      font-family: SamoSansProBold
+      display: inline-block
+      margin: 0
+      font-weight: bold
+      font-size: 14px
+      line-height: 14px
+      text-align: center
+      padding: 4px 3rem
+      text-transform: uppercase
+  .post-info
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    .post-left
+      flex: 1 0 70%
+      max-width: 745px
+    .post-right
+      flex: 1 0 30%
+      max-width: 30%
+
+    .wp-post-image
+      max-width: 566px
+      max-height: 378px
+      margin: 0 auto
+      width: 100%
+      height: auto
+      object-fit: contain
+
+    abbr[title]
+      text-decoration: none
+    dd, dt
+      margin: 0
+      margin-right: 10px
+      font-size: 18px
+      line-height: 20px
+      display: inline-block
+
+    dl > div
+      margin-bottom: 0.7rem
+    .post-title
+      margin-bottom: 2rem
+      font-family: "SamoSansPro"
+      font-style: normal
+      font-weight: 500
+      font-size: 36px
+      line-height: 46px
+    .post-meta
+      color: $c-4
+      margin-bottom: 3rem
+    .post-excerpt
+      margin-bottom: 2rem
+      p
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 40px
+    .post-link
+      .post-link-btn
+        @extend .btn-primary
+
+.tribe_events
+  dt, dl, dd, p, a, span
+    font-family: SamoSansPro
+.tribe-events-abbr,
+.tribe-events-event-cost,
+.tribe-organizer,
+.tribe-organizer-tel,
+.tribe-venue,
+.tribe-venue-location,
+.tribe-venue-tel
+  color: #A9A9A9
+.tribe-events-event-meta:before
+  display: none
+
+#tribe-events-pg-template
+  max-width: 1260px
+
+.tribe-events .tribe-events-calendar-month__calendar-event--featured:before
+  background-color: $c-2
+
+.tribe-events .tribe-events-calendar-list__event-row--featured .tribe-events-calendar-list__event-date-tag-datetime:after
+  background-color: $c-2
+
+.tribe-events .tribe-events-calendar-month__mobile-events-icon--featured .tribe-events-calendar-month__mobile-events-icon-svg path,
+.tribe-common .tribe-common-c-svgicon--featured path
+  fill: $c-2
+
+.tribe-events-single-section.tribe-events-event-meta
+  border-top: 1px solid #E2E2E2
+  padding-top: 4rem
+  margin-top: 4rem
+
+  &.primary
+    width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: stretch
+    justify-content: space-between
+    .title
+      font-family: SamoSansProBold
+      font-style: normal
+      font-weight: bold
+      font-size: 24px
+      line-height: 26px
+      margin-bottom: 6rem
+
+    .program
+      flex: 1 0 50%
+      max-width: 50%
+    .gallery-row
+      flex: 1 0 50%
+      max-width: 50%
+      padding-top: 100px
+      div
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: stretch
+
+        justify-content: flex-end
+        .image-wrapper
+          margin-bottom: 2rem
+          max-width: 50%
+          flex: 1 0 50%
+          &:hover
+            cursor: pointer
+          img
+            object-fit: cover
+
+
+  &.secondary
+    width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: stretch
+    justify-content: space-around
+
+    .tribe-events-meta-group
+      margin: 0 !important
+      width: auto !important
+      .tribe-events-single-section-title:after
+        display: block
+        content: ''
+        width: 100%
+        max-width: 90px
+        height: 6px
+        background: $c-2
+        margin: 1rem 0 2rem 0
+
+
+.tribe-common.tribe-events.tribe-events-view
+  background: $c-4
+  padding: 4rem
+  max-width: 956px
+  margin: 0 auto
+  margin-bottom: 6rem
+  margin-top: -300px
+  border-radius: 20px
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.12)
+  #tribe-events-view-selector-content,
+  .tribe-events-header__messages.tribe-events-c-messages
+    display: none
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container
+  padding: 0
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-common-c-btn.tribe-events-c-search__button
+  margin-right: 1rem
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-month__day
+  min-height: 130px !important
+
+.tribe-events .tribe-events-calendar-month__calendar-event-featured-image, .tribe-events .tribe-events-calendar-month__calendar-event-featured-image-link
+  object-fit: cover
+  object-position: center
+  max-width: 80px
+  max-height: 80px
+.tribe-events-calendar-month__calendar-event-datetime
+  font-size: 10px !important
+  font-family: SamoSansPro !important
+.tribe-events-calendar-month__calendar-event-title-link.tribe-common-anchor-thin
+  font-size: 10px !important
+  font-family: SamoSansProBold !important
+  font-weight: bold
+.tribe-events-single-section-title
+  font-family: SamoSansProBold !important
+  font-weight: bold
+.tribe-events-calendar-month__calendar-event-datetime-featured-icon
+  position: relative
+  svg
+    visibility: hidden
+  &:after
+    content: ' '
+    display: block
+    position: absolute
+    background-color: $c-4
+    width: 10px
+    height: 10px
+    left: 0
+    top: 0
+    z-index: 1
+    background-image: url("assets/icons/theme/time-red.svg")
+    background-size: contain
+.tribe-events .tribe-events-calendar-month__day-date-daynum
+  font-size: 16px
+
+.tribe-events-single
+  .tribe-events-single-section
+    position: relative
+  .event-buttons-wrapper
+    display: flex
+    justify-content: center
+    align-items: baseline
+    flex-direction: row
+    flex-wrap: wrap
+    a,
+    .tribe-events-button
+      height: 55px
+  .event-buttons-wrapper-v2
+    display: flex
+    position: absolute
+    right: 0
+    top: 50px
+    width: 60%
+    justify-content: flex-end
+    a:last-child
+      margin: 0
+  .event-buttons-wrapper-v1
+    display: none
+
+  a
+    display: block
+    color: $c-secondary
+  a:hover
+    opacity: .8
+  .tribe-events-back
+    font-weight: 500
+    font-family: SamoSansProBold
+  abbr[title]
+    text-decoration: none
+  .tribe-events-gcal.tribe-events-button
+    @extend .effect-btn
+    @extend .red
+    background-image: none
+    line-height: 50px
+    padding: 0 1rem
+    color: $c-4 !important
+  .tribe-events-ical.tribe-events-button
+    @extend .effect-btn
+    @extend .gray
+    line-height: 50px
+    padding: 0 1rem
+    color: #696969 !important
+    background-image: none
+
+
+
+
+  dt
+    font-family: SamoSansProMedium
+  .tribe-events-single-event-title
+    font-weight: 500
+    font-size: 36px !important
+    line-height: 46px !important
+    font-family: SamoSansProBold
+  .tribe-events-single-section-title
+    font-weight: 500
+    font-size: 26px !important
+    line-height: 36px !important
+  .tribe-events-single-event-description.tribe-events-content
+    padding-bottom: 2rem
+
+    p
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 46px
+      color: #87898C
+
+  #tribe-events-footer
+    border: 0
+
+.tribe-common-c-btn.tribe-events-c-search__button
+  background: $c-2
+  color: $c-4
+  &:hover
+    background: $c-2
+    opacity: .9
+
+.tribe-events-calendar-list__event-datetime-featured-text,
+.tribe-events-c-ical.tribe-common-b2.tribe-common-b3--min-medium
+  display: none
+.tribe-events-calendar-list__event-wrapper article.type-tribe_events
+  border: 0 !important
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Respo
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  .tribe-common.tribe-events.tribe-events-view,
+  #tribe-events-pg-template
+    max-width: 1290px
+
+
+
+@media screen and (min-width: $tablet-max-width) and (max-width: $small-screens-max-width)
+  .news-section
+    margin: 5rem 0
+
+  article.type-tribe_events
+    padding-bottom: 2rem
+    margin-bottom: 2rem
+
+    .post-header
+      margin-bottom: 1rem
+      .tribe-events-sale
+        padding: 4px 1rem
+    .post-info
+      .post-left
+        flex: 1 0 50%
+        width: 50%
+      .post-right
+        flex: 1 0 50%
+        width: 50%
+        max-width: 50%
+      dd, dt
+        font-size: 16px
+        line-height: 20px
+      dt
+        position: absolute
+      dd
+        padding-left: 35px
+      dl > div
+        margin-bottom: 0.5rem
+      .post-title
+        margin-bottom: 1rem
+        font-size: 24px
+        line-height: 28px
+      .post-meta
+        margin-bottom: 2rem
+      .post-excerpt
+        margin-bottom: 2rem
+        p
+          font-size: 16px
+          line-height: 20px
+    .post-link-btn
+      width: 100%
+      display: block
+      margin-bottom: 1rem
+
+  .tribe-events-c-nav__prev-label,
+  .tribe-events-c-nav__next-label
+    display: none
+  .tribe-common.tribe-events.tribe-events-view
+    padding: 2rem 15px
+    max-width: 956px
+    margin: 0 auto
+    margin-bottom: 2rem
+    margin-top: -70px
+    border-radius: 0
+
+
+  .tribe-events-calendar-list__event.tribe-common-g-row.tribe-common-g-row--gutters
+    border: 0
+  .tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-month__day
+    min-height: 70px !important
+
+
+  .tribe-events .tribe-events-calendar-month__day-date-daynum
+    font-size: 16px
+
+  .tribe-events .tribe-events-calendar-list__event-featured-image
+    max-height: 200px
+    object-fit: cover
+    object-position: top
+  .tribe-events-pg-template
+    padding-top: 0 !important
+  .tribe-events-single
+    .event-buttons-wrapper-v2
+      display: flex
+      max-width: 200px
+    .event-buttons-wrapper-v1
+      display: none
+    .event-buttons-wrapper
+      flex-direction: column
+
+      .effect-btn,
+      .tribe-events-cal-links
+        display: block
+        width: 100%
+        margin-bottom: 1rem
+        text-align: center
+
+
+    .tribe-events-gcal.tribe-events-button
+      width: 100%
+    .tribe-events-ical.tribe-events-button
+      width: 100%
+
+    .tribe-events-single-event-title
+      font-size: 20px !important
+      line-height: 24px !important
+    .tribe-events-single-section-title
+      font-size: 20px !important
+      line-height: 24px !important
+    .tribe-events-single-event-description.tribe-events-content
+      padding-bottom: 1rem
+
+      p
+        font-size: 16px
+        line-height: 20px
+    .tribe-events-event-meta.primary, .tribe-events-event-meta.secondary
+      width: 100%
+      flex-direction: column
+      .tribe-events-meta-group-venue,
+      .tribe-events-venue-map
+        max-width: 100%
+        width: 100%
+        flex: 1 0 100%
+
+
+  .tribe-events-single-section.tribe-events-event-meta
+
+    .tribe-events-meta-group
+      padding-bottom: 3rem
+    .tribe-events-meta-group
+      flex: 1 0 50%
+    &.primary
+      flex-direction: row
+      .title
+        font-size: 22px
+        line-height: 24px
+        margin-bottom: 2rem
+
+      .program
+        flex: 1 0 100%
+        max-width: 100%
+      .gallery-row
+        flex: 1 0 100%
+        max-width: 100%
+        div
+          flex-direction: row
+          .image-wrapper
+            max-width: 25%
+            flex: 1 0 25%
+            padding: 1rem
+            img
+              width: 100%
+              max-width: 250px
+              margin: 0 auto
+    &.secondary
+      flex-direction: row
+      .tribe-events-meta-group,
+      .tribe-events-venue-map
+        max-width: 50%
+        width: 50%
+        flex: 1 0 50%
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .news-section
+    margin: 7rem 0
+
+  article.type-tribe_events
+    padding-bottom: 2rem
+    margin-bottom: 2rem
+
+    .post-header
+      margin-bottom: 1rem
+      .tribe-events-sale
+        padding: 4px 1rem
+    .post-info
+      .post-left
+        flex: 1 0 50%
+        width: 50%
+      .post-right
+        flex: 1 0 50%
+        width: 50%
+        max-width: 50%
+      dd, dt
+        font-size: 16px
+        line-height: 20px
+      dt
+        position: absolute
+      dd
+        padding-left: 35px
+      dl > div
+        margin-bottom: 0.5rem
+      .post-title
+        margin-bottom: 1rem
+        font-size: 24px
+        line-height: 28px
+      .post-meta
+        margin-bottom: 2rem
+      .post-excerpt
+        margin-bottom: 2rem
+        p
+          font-size: 16px
+          line-height: 20px
+    .post-link-btn
+      width: 100%
+      display: block
+      margin-bottom: 1rem
+
+  .tribe-events-calendar-list__event-date-tag.tribe-common-g-col
+    position: absolute
+    left: 0
+    width: 35px
+  .tribe-events-c-nav__prev-label,
+  .tribe-events-c-nav__next-label
+    display: none
+  .tribe-common.tribe-events.tribe-events-view
+    padding: 0 15px
+    max-width: 956px
+    margin: 0 auto
+    margin-bottom: 2rem
+    margin-top: -70px
+    border-radius: 0
+
+  .tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-month__day
+    min-height: 70px !important
+
+
+  .tribe-events .tribe-events-calendar-month__day-date-daynum
+    font-size: 16px
+
+  .tribe-events .tribe-events-calendar-list__event-featured-image
+    max-height: 200px
+    object-fit: cover
+    object-position: top
+  .tribe-events-pg-template
+    padding-top: 0 !important
+  .tribe-events-single
+    .event-buttons-wrapper-v2
+      display: none
+    .event-buttons-wrapper-v1
+      display: flex
+    .event-buttons-wrapper
+      flex-direction: column
+
+      .effect-btn,
+      .tribe-events-cal-links
+        display: block
+        width: 100%
+        margin-bottom: 1rem
+        text-align: center
+
+
+    .tribe-events-gcal.tribe-events-button
+      width: 100%
+    .tribe-events-ical.tribe-events-button
+      width: 100%
+
+    .tribe-events-single-event-title
+      font-size: 20px !important
+      line-height: 24px !important
+    .tribe-events-single-section-title
+      font-size: 20px !important
+      line-height: 24px !important
+    .tribe-events-single-event-description.tribe-events-content
+      padding-bottom: 1rem
+
+      p
+        font-size: 16px
+        line-height: 20px
+    .tribe-events-event-meta.primary, .tribe-events-event-meta.secondary
+      width: 100%
+      flex-direction: column
+      .tribe-events-meta-group-venue,
+      .tribe-events-venue-map
+        max-width: 100%
+        width: 100%
+        flex: 1 0 100%
+
+  .tribe-events-single-section.tribe-events-event-meta
+    .tribe-events-meta-group
+      padding-bottom: 3rem
+    .tribe-events-meta-group
+      flex: 1 0 50%
+    &.primary
+      flex-direction: row
+      .title
+        font-size: 22px
+        line-height: 24px
+        margin-bottom: 2rem
+
+      .program
+        flex: 1 0 100%
+        max-width: 100%
+      .gallery-row
+        flex: 1 0 100%
+        max-width: 100%
+        div
+          flex-direction: row
+          .image-wrapper
+            max-width: 50%
+            flex: 1 0 50%
+            img
+              margin: 0 auto
+              width: 100%
+              max-width: 250px
+    &.secondary
+      flex-direction: row
+@media screen and (max-width: $mobile-max-width)
+  .news-section
+    margin: 7rem 0
+
+  article.type-tribe_events
+    padding-bottom: 2rem
+    margin-bottom: 2rem
+
+    .post-header
+      margin-bottom: 1rem
+      .tribe-events-sale
+        padding: 4px 1rem
+    .post-info
+      flex-direction: column
+      .post-left
+        flex: 1 0 100%
+        width: 100%
+      .post-right
+        flex: 1 0 100%
+        width: 100%
+        max-width: 100%
+      dd, dt
+        font-size: 16px
+        line-height: 20px
+      dt
+        position: absolute
+      dd
+        padding-left: 35px
+      dl > div
+        margin-bottom: 0.5rem
+      .post-title
+        margin-bottom: 1rem
+        font-size: 24px
+        line-height: 28px
+      .post-meta
+        margin-bottom: 2rem
+      .post-excerpt
+        margin-bottom: 2rem
+        p
+          font-size: 16px
+          line-height: 20px
+    .post-link-btn
+      width: 100%
+      display: block
+      margin-bottom: 1rem
+
+  .tribe-events-calendar-list__event-date-tag.tribe-common-g-col
+    position: absolute
+    left: 0
+    width: 35px
+  .tribe-events-c-nav__prev-label,
+  .tribe-events-c-nav__next-label
+    display: none
+  .tribe-common.tribe-events.tribe-events-view
+    padding: 0 15px
+    max-width: 956px
+    margin: 0 auto
+    margin-bottom: 2rem
+    margin-top: -70px
+    border-radius: 0
+
+  .tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-month__day
+    min-height: 70px !important
+
+
+  .tribe-events .tribe-events-calendar-month__day-date-daynum
+    font-size: 16px
+
+  .tribe-events-pg-template
+    padding-top: 0 !important
+  .tribe-events-single
+    .event-buttons-wrapper-v2
+      display: none
+    .event-buttons-wrapper-v1
+      display: flex
+    .event-buttons-wrapper
+      flex-direction: column
+
+      .effect-btn,
+      .tribe-events-cal-links
+        display: block
+        width: 100%
+        margin-bottom: 1rem
+        text-align: center
+
+
+    .tribe-events-gcal.tribe-events-button
+      width: 100%
+    .tribe-events-ical.tribe-events-button
+      width: 100%
+
+    .tribe-events-single-event-title
+      font-size: 20px !important
+      line-height: 24px !important
+    .tribe-events-single-section-title
+      font-size: 20px !important
+      line-height: 24px !important
+    .tribe-events-single-event-description.tribe-events-content
+      padding-bottom: 1rem
+
+      p
+        font-size: 16px
+        line-height: 20px
+    .tribe-events-event-meta.primary, .tribe-events-event-meta.secondary
+      width: 100%
+      flex-direction: column
+      .tribe-events-meta-group-venue,
+      .tribe-events-venue-map
+        max-width: 100%
+        width: 100%
+        flex: 1 0 100%
+  .tribe-events-single-section.tribe-events-event-meta
+    .tribe-events-meta-group
+      flex: 1 0 100%
+      padding-bottom: 3rem
+      text-align: center
+      .tribe-events-single-section-title:after
+        left: 0
+        right: 0
+        margin: 1rem auto 2rem auto !important
+    &.primary
+      flex-direction: row
+      .title
+        font-family: SamoSansProBold
+        font-size: 20px
+        line-height: 22px
+        margin-bottom: 2rem
+
+      .program
+        flex: 1 0 100%
+        max-width: 100%
+      .gallery-row
+        flex: 1 0 100%
+        max-width: 100%
+        padding-top: 100px
+        div
+          flex-direction: column
+          .image-wrapper
+            max-width: 100%
+            flex: 1 0 100%
+    &.secondary
+      flex-direction: row

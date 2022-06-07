@@ -1,0 +1,680 @@
+@import "fonts"
+
+$c-1: #000000
+$c-2: #A32035
+$c-3: #87898C
+$c-4: #ffffff
+$c-primary: $c-1
+$c-secondary: $c-2
+$c-accent: $c-3
+$c-contrast: $c-4
+
+$bg-color-1: $c-1
+$bg-color-2: $c-4
+
+$mobile-max-width: 580px
+$tablet-max-width: 768px
+$small-screens-max-width: 1024px
+$notebook-max-width: 1550px
+$desktop-max-width: 1400px
+
+
+
+body
+  padding: 0
+  &.admin-bar
+    margin-top: 20px
+    #header-parent-wrapper
+      //top: 50px
+  &.dark
+    background-color: $bg-color-1
+    color: $c-4
+  &.light
+    background-color: $bg-color-2
+
+
+h1, h2, h3
+  font-family: SamoSansProBold, serif
+
+html, body, a, p, h1, h2, h3, h4, h5, h6, ul, li
+  font-family: SamoSansPro, serif
+  font-weight: normal
+
+
+html, body *
+  outline: none
+
+
+small a
+  color: $c-2
+
+// Menu Links hover ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//.link-elara
+ul.menu li.menu-item a
+  cursor: pointer
+  position: relative
+
+  &::before
+    position: absolute
+    width: 100%
+    height: 1px
+    background: $c-secondary
+    bottom: -4px
+    left: 0
+    pointer-events: none
+    content: ''
+    visibility: hidden
+    transition: .2s visibility ease-in-out
+
+  &::after
+    position: absolute
+    width: 100%
+    height: 1px
+    background: $c-secondary
+    bottom: -5px
+    left: 0
+    pointer-events: none
+    content: ''
+    visibility: hidden
+    transition: .2s visibility ease-in-out
+
+ul.menu li.menu-item a::before
+  transform-origin: 50% 100%
+  transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1)
+  clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%)
+
+ul.menu li.menu-item a:hover::before
+  visibility: visible
+  transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1)
+  clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%)
+
+ul.menu li.menu-item a span
+  display: inline-block
+  transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1)
+
+ul.menu li.menu-item a:hover span
+  transform: translate3d(0, -2px, 0)
+
+
+// General title ///////////////////////////////////////////////////////////////////////////////////////////////////////
+.title h2
+  font-weight: bold
+  font-size: 36px
+  line-height: 40px
+  font-family: SamoSansProBold
+  font-style: normal
+  margin-bottom: 5rem
+
+
+// Menu Links //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+ul.menu
+  li.menu-item
+    display: inline
+    margin-right: 30px
+
+    a
+      color: $c-1
+      font-size: 14px
+      line-height: 15px
+      font-weight: normal
+      transition: .3s ease-in-out
+
+      &:hover
+        color: $c-2
+
+    &.current-menu-item
+      a
+        font-weight: bold
+        color: $c-2
+
+    &.menu-item-has-children
+      position: relative
+      .sub-menu
+        display: none
+        height: 0
+        transition: .3s ease-in-out
+        .current-menu-item:after
+          display: none !important
+        .current-menu-item
+          a
+            font-weight: 300 !important
+            background: $c-1 !important
+      &:hover
+        .sub-menu
+          padding-top: 1rem
+          display: block
+          position: absolute
+          top: 17px
+          left: 0
+          right: 0
+          width: 100%
+          min-width: 200px
+          height: auto
+          .menu-item
+            margin-right: 0
+            padding-bottom: 10px
+            &:hover a
+              color: $c-4 !important
+            a
+              &:hover::after
+                display: none
+                content: none
+              &:hover::before
+                display: none
+                content: none
+              &:after
+                display: none
+                content: none
+
+              display: block
+              padding: 8px 10px
+              text-align: center
+              font-size: 12px !important
+              line-height: 12px !important
+              background: $c-secondary
+              color: $c-4
+              margin-bottom: 5px
+
+
+
+.container:not(.full)
+  max-width: 1590px
+  margin: 0 auto
+
+.show-on-scroll
+  display: none
+
+.scrolled-down
+  .show-on-scroll
+    display: block
+
+strong
+  font-family: 'SamoSansProBold'
+  font-weight: bold
+
+.page-content
+  img
+    max-width: 100%
+    height: auto
+  h2
+    font-style: normal
+    font-family: 'SamoSansProBold'
+    word-break: break-word
+    font-size: 36px
+    line-height: 40px
+    margin-bottom: 2rem
+  h3
+    word-break: break-word
+    font-style: normal
+    font-family: 'SamoSansProBold'
+    font-weight: bold
+    font-size: 34px
+    line-height: 38px
+    margin-bottom: 2rem
+  p
+    margin: 0.5em 0
+    word-break: break-word
+    font-size: 18px
+    line-height: 40px
+  ul
+    list-style: disc
+    padding-left: 1rem
+    li
+      margin-bottom: 1rem
+
+
+
+  a
+    color: $c-secondary
+
+.language-wrapper  .wpml-ls
+  padding: 0 !important
+  .wpml-ls-item
+    &.wpml-ls-current-language
+      display: none
+    .wpml-ls-link span
+      display: none
+
+
+.pager .page-numbers,
+.page-content a.btn-primary,
+.btn-primary
+  color: $c-4
+  padding: 15px 60px
+  font-weight: 500
+  font-size: 18px
+  line-height: 26px
+  text-align: center
+  display: inline-block
+
+.pager .page-numbers
+  color: $c-4
+  background-color: $c-secondary
+  padding: 1rem 2rem
+  font-weight: 500
+  font-size: 16px
+  line-height: 18px
+  text-align: center
+  display: inline-block
+  border: 1px solid $c-secondary
+
+.pager .page-numbers.current,
+.btn-secondary
+  color: $c-2
+  background-color: $c-4
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#content
+  overflow: hidden
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* ~~~~~~~ INIT. BTN ~~~~~~~ */
+.btn
+  padding: .7rem 3rem
+
+.effect-btn
+  position: relative
+  text-decoration: none
+  cursor: pointer
+  user-select: none
+  margin-right: 15px
+  height: 60px
+  display: inline-block
+  width: auto
+  transition: background-color, color 1.35s cubic-bezier(0.19, 1, 0.22, 1)
+
+  svg
+    height: calc(100% + 2px)
+    left: 0
+    position: absolute
+    top: -1px
+    width: 100%
+
+  rect
+    fill: none
+    stroke: #fff
+    stroke-width: 1
+    stroke-dasharray: 522, 0
+    width: 100%
+
+  &:hover
+
+    rect
+      stroke-width: 2
+      stroke-dasharray: 0, 400
+      stroke-dashoffset: 20
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1)
+
+  &.red
+    border: 1px solid $c-2
+    background-color: $c-2
+    color: $c-4 !important
+    rect
+      stroke: $c-2
+    &:hover
+      rect
+        stroke: $c-4
+  &.white
+    border: 1px solid $c-4
+    background-color: $c-4
+    color: $c-1
+    rect
+      stroke: $c-4
+    &:hover
+      rect
+        stroke: $c-2
+  &.black
+    border: 1px solid $c-4
+    background-color: $c-1
+    color: $c-4
+    rect
+      stroke: $c-1
+    &:hover
+      rect
+        stroke: $c-2
+  &.gray
+    border: 1px solid #696969
+    background-color: transparent
+    color: #696969
+    rect
+      stroke: #696969
+    &:hover
+      background-color: $c-1
+      color: $c-4 !important
+      rect
+        stroke: $c-4
+  &.inverted
+
+
+//.effect-btn.inverted
+//  border: 1px solid #696969
+//
+//.effect-btn.inverted:before
+//  background-color: transparent
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* Theme icons */
+
+a.icon
+  padding-left: 35px
+  position: relative
+  display: inline-block
+  overflow: hidden
+  line-height: 50px
+  &:before
+    position: absolute
+    left: 2px
+    top: 14px
+    content: ''
+    background-repeat: no-repeat !important
+    background-size: contain !important
+    background-position: center center
+    display: inline-block
+    width: 25px
+    height: 25px
+    font-size: 25px
+
+
+a.icon.phone
+  &:before
+    background-image: url("./assets/icons/theme/phone.svg")
+    transition: .3s ease-in-out
+
+  &:hover:before
+    animation: marker 0.82s ease-in-out both
+    transform: translate3d(0, 0, 0)
+    backface-visibility: hidden
+
+a.icon.email
+  &:before
+    transition: .3s ease-in-out
+    background-image: url("./assets/icons/theme/envelope.svg")
+  &.style-2:before
+    background-image: url("./assets/icons/theme/envelope-white.svg")
+  &:hover:before
+    animation: marker 0.82s ease-in-out both
+    transform: translate3d(0, 0, 0)
+    backface-visibility: hidden
+
+a.icon.document
+  &:before
+    background-image: url("./assets/icons/theme/document.svg")
+  &:hover:before
+    opacity: .8
+
+a.icon.instagram
+  &:before
+    background-image: url("./assets/icons/theme/instagram.svg")
+  &.style-2:before
+    background-image: url("./assets/icons/theme/instagram-white.svg")
+  &:hover:before
+    animation: marker 0.82s ease-in-out both
+    transform: translate3d(0, 0, 0)
+    backface-visibility: hidden
+a.icon.youtube
+  &:before
+    background-image: url("./assets/icons/theme/youtube.svg")
+  &.style-2:before
+    background-image: url("./assets/icons/theme/youtube-white.svg")
+  &:hover:before
+    animation: marker 0.82s ease-in-out both
+    transform: translate3d(0, 0, 0)
+    backface-visibility: hidden
+
+a.icon.facebook
+  &:before
+    background-image: url("./assets/icons/theme/facebook.svg")
+  &.style-2:before
+    background-image: url("./assets/icons/theme/facebook-white.svg")
+  &:hover:before
+    animation: marker 0.82s ease-in-out both
+    transform: translate3d(0, 0, 0)
+    backface-visibility: hidden
+
+a.icon.web
+  &:before
+    background-image: url("./assets/icons/theme/globe.svg")
+  &.style-2:before
+    filter: invert(1)
+    background-image: url("./assets/icons/theme/globe.svg")
+  &:hover:before
+    animation: marker 0.82s ease-in-out both
+    transform: translate3d(0, 0, 0)
+    backface-visibility: hidden
+
+a.icon.marker
+  &:before
+    background-image: url("./assets/icons/theme/marker.svg")
+  &.style-2:before
+    background-image: url("./assets/icons/theme/marker-white.svg")
+  &:hover:before
+    animation: marker 0.82s ease-in-out both
+    transform: translate3d(0, 0, 0)
+    backface-visibility: hidden
+
+a.icon.style-1
+  background-color: $c-4
+  padding-top: 10px
+  padding-left: 50px
+  padding-right: 20px
+  width: auto
+  height: 45px
+  line-height: 26px
+  font-size: 20px
+  color: $c-1 !important
+  &:before
+    left: 15px
+    top: 12px
+    bottom: 0
+    margin: 0 auto
+
+a.icon.style-2
+  background-color: transparent
+  color: $c-4
+  padding-top: 10px
+  padding-left: 50px
+  padding-right: 20px
+  width: auto
+  height: 45px
+  line-height: 26px
+  font-size: 20px
+  &:before
+    left: 15px
+    top: 12px
+    bottom: 0
+    margin: 0 auto
+
+a.icon.no-text
+  padding: 10px 0 0 0
+  font-size: 0 !important
+  width: 45px
+  &:before
+    left: 0
+    right: 0
+
+@keyframes marker
+  0%
+    transform: translate3d(0, -1px, 0)
+  30%
+    transform: translate3d(0, -5px, 0)
+  60%
+    transform: translate3d(0, -2px, 0)
+  100%
+    transform: translate3d(0, -3px, 0)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Containers Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+@media only screen and (max-width: 1550px)
+  .container:not(.full)
+    max-width: 1290px !important
+@media only screen and (max-width: 1350px)
+  .container:not(.full)
+    max-width: 1090px !important
+@media only screen and (max-width: 1230px)
+  .container:not(.full)
+    max-width: 1090px !important
+
+@media only screen and (max-width: 1130px)
+  .container:not(.full)
+    max-width: 990px !important
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// General Respo
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media only screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  .title h2
+    font-size: 34px
+  .page-content p
+    font-size: 16px
+  .page-content h3
+    font-size: 30px
+  .btn
+    padding: .4rem 1.5rem
+    word-break: keep-all
+
+  .effect-btn
+    height: 55px
+  .pager .page-numbers,
+  .page-content a.btn-primary,
+  .btn-primary
+    padding: 15px 30px
+    font-size: 16px
+    line-height: 24px
+
+
+@media only screen and (min-width: $tablet-max-width) and (max-width: $small-screens-max-width)
+  #wpadminbar
+    display: none
+  html,
+  body.admin-bar
+    margin: 0 !important
+  .effect-btn
+    margin-right: 0
+  body
+    padding-top: 50px
+  h1
+    font-size: 30px
+    line-height: 34px
+  .title h2, h2
+    font-size: 28px
+    line-height: 32px
+  h3
+    font-size: 24px
+    line-height: 30px
+  h4
+    font-size: 24px
+    line-height: 28px
+  h5
+    font-size: 22px
+    line-height: 26px
+  h6
+    font-size: 20px
+    line-height: 24px
+  p, span, a
+    font-size: 18px
+    line-height: 22px
+  .page-content
+    h2
+      font-size: 28px
+      line-height: 32px
+    h3
+      font-size: 24px
+      line-height: 30px
+    p
+      font-size: 18px
+      line-height: 22px
+
+
+@media only screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  #wpadminbar
+    display: none
+  html,
+  body.admin-bar
+    margin: 0 !important
+  .effect-btn
+    margin-right: 0
+  body
+    padding-top: 50px
+  h1
+    font-size: 28px
+    line-height: 32px
+  .title h2, h2
+    font-size: 26px
+    line-height: 30px
+  h3
+    font-size: 22px
+    line-height: 28px
+  h4
+    font-size: 22px
+    line-height: 26px
+  h5
+    font-size: 20px
+    line-height: 24px
+  h6
+    font-size: 18px
+    line-height: 22px
+  p, span, a
+    font-size: 16px
+    line-height: 20px
+  .page-content
+    h2
+      font-size: 26px
+      line-height: 30px
+    h3
+      font-size: 22px
+      line-height: 28px
+    p
+      font-size: 16px
+      line-height: 20px
+@media only screen and (max-width: $mobile-max-width)
+  .btn
+    padding: .8rem 3rem
+  .pager .page-numbers,
+  .page-content a.btn-primary,
+  .btn-primary
+    padding: 15px 15px
+  #wpadminbar
+    display: none
+  html,
+  body.admin-bar
+    margin: 0 !important
+  .effect-btn
+    margin-right: 0
+  body
+    padding-top: 50px
+  h1
+    font-size: 28px
+    line-height: 32px
+  .title h2, h2
+    font-size: 26px
+    line-height: 30px
+  h3
+    font-size: 22px
+    line-height: 28px
+  h4
+    font-size: 22px
+    line-height: 26px
+  h5
+    font-size: 20px
+    line-height: 24px
+  h6
+    font-size: 18px
+    line-height: 22px
+  p, span, a
+    font-size: 16px
+    line-height: 20px
+  .page-content
+    h2
+      font-size: 26px
+      line-height: 30px
+    h3
+      font-size: 22px
+      line-height: 28px
+    p
+      font-size: 16px
+      line-height: 20px

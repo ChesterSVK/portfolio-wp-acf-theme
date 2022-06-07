@@ -1,0 +1,54 @@
+.not-found-section
+  margin-bottom: 3rem
+  position: relative
+  .absolute-wrapper
+    position: absolute
+    left: 0
+    right: 0
+    top: 49%
+    text-align: center
+    z-index: 1
+    h2.title
+      margin: 0 auto
+      color: $c-secondary
+      margin-bottom: 5rem
+      font-weight: bold
+      font-size: 36px
+      line-height: 40px
+      display: block
+      font-family: SamoSansProBold
+    .effect-btn
+      margin: 8rem auto 0 auto
+      padding: 1.2rem 2rem
+  .not-found-bg
+    height: 900px
+    background-image: url("assets/img/404.jpg")
+    background-size: contain
+    background-position: center center
+    background-repeat: no-repeat
+
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  .not-found-section .effect-btn
+    line-height: 36px
+@media screen and (min-width: $mobile-max-width) and (max-width: $small-screens-max-width)
+  .not-found-section
+    margin-bottom: 3rem
+    .absolute-wrapper
+      h2.title
+        font-size: 22px
+        line-height: 24px
+      .effect-btn
+        margin: 5rem auto 0 auto
+    .not-found-bg
+      height: 500px
+@media screen and (max-width: $mobile-max-width)
+  .not-found-section
+    margin-bottom: 2rem
+    .absolute-wrapper
+      h2.title
+        font-size: 22px
+        line-height: 24px
+      .effect-btn
+        margin: 4rem auto 0 auto
+    .not-found-bg
+      height: 400px

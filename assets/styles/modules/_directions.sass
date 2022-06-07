@@ -1,0 +1,99 @@
+.directions-section
+  padding-bottom: 6rem
+
+  .container
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-content: space-around
+    justify-content: space-around
+    align-items: stretch
+    .directions
+      flex: 1 0 50%
+      max-width: 50%
+      text-align: center
+      .directions-items
+        max-width: 380px
+        margin: 0 auto
+        .direction-item
+          max-width: 380px
+          margin: 0 auto 20px auto
+          position: relative
+
+          .direction-icon
+            margin-right: 15px
+            position: relative
+            z-index: 1
+            border-radius: 50%
+            width: 56px
+            height: 56px
+            line-height: 56px
+            text-align: center
+            background-color: $c-secondary
+            padding-top: 5px
+            display: inline-block
+          .direction-text
+            font-size: 24px
+            line-height: 26px
+            display: inline-block
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media screen and (min-width: $tablet-max-width) and (max-width: $small-screens-max-width)
+  .directions-section
+    padding-bottom: 2rem
+    .container
+      padding: 0 15px
+      .directions
+        margin-bottom: 2rem
+        .directions-items
+          .direction-item
+            max-width: 250px
+
+            .direction-icon
+              img
+                margin-top: .5rem
+
+            .direction-text
+              font-size: 16px
+              line-height: 20px
+
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .directions-section
+    padding-bottom: 2rem
+    .container
+      padding: 0 15px
+      .directions
+        margin-bottom: 2rem
+        .directions-items
+          .direction-item
+            max-width: 250px
+
+            .direction-icon
+              img
+                margin-top: .5rem
+            .direction-text
+              font-size: 16px
+              line-height: 20px
+@media screen and (max-width: $mobile-max-width)
+  .directions-section
+    padding-bottom: 2rem
+    .container
+      padding: 0 15px
+      flex-direction: column
+      .directions
+        flex: 1 0 100%
+        max-width: 100%
+        margin-bottom: 2rem
+        .directions-items
+          .direction-item
+
+            .direction-icon
+            .direction-text
+              font-size: 16px
+              line-height: 20px
+
+

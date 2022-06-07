@@ -1,0 +1,59 @@
+.info-section
+  padding: 6rem 0
+  margin: 8rem 0
+  background-image: url("./assets/img/info-bg.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  color: $c-4
+  text-align: center
+  .title h2
+    margin-bottom: 4rem
+    &:after
+      content: ''
+      display: block
+      width: 150px
+      height: 6px
+      border-radius: 4px
+      background: $c-4
+      margin: 2rem auto
+  .text
+    p
+      text-shadow: none
+      font-size: 18px
+      line-height: 40px
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  .info-section .text p
+    font-size: 16px
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .info-section
+    padding: 3rem 0
+    margin: 3rem 0
+    .page-content
+      padding: 0 15px
+    .title h2
+      margin-bottom: 2rem
+    .text
+      p
+        text-shadow: none
+        font-size: 16px
+        line-height: 22px
+@media screen and (max-width: $mobile-max-width)
+  .info-section
+    padding: 3rem 0
+    margin: 3rem 0
+    .page-content
+      padding: 0 15px
+    .title h2
+      margin-bottom: 2rem
+    .text
+      p
+        text-shadow: none
+        font-size: 16px
+        line-height: 20px
+

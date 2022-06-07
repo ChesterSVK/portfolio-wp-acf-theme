@@ -1,0 +1,27 @@
+.button-section
+  .container
+    margin: 6rem auto
+    &.center
+    text-align: center
+    &.left
+      text-align: left
+    &.right
+      text-align: right
+
+    .module-button
+      padding: 1rem 6rem
+      font-family: SamoSansProMedium
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .button-section
+    .container
+      margin: 3rem auto
+@media only screen and (max-width: $mobile-max-width)
+  .button-section
+    .container
+      margin: 2rem auto

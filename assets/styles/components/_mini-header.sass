@@ -1,0 +1,72 @@
+#mini-header
+  position: relative
+  height: 70px
+  overflow: hidden
+
+  &.scrolled-down
+    visibility: hidden
+
+  .mini-header-wrap
+    height: 100%
+    max-width: 1650px
+    margin: 0 auto
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+    justify-content: flex-end
+    padding: 0 3rem
+    &:after
+      content: ""
+      display: block
+      width: calc(100% - 100px)
+      left: 0
+      right: 0
+      bottom: 0
+      position: absolute
+      margin: 0 auto
+      height: 1px
+      background-color: rgba(81, 81, 81, 0.8)
+
+    .header-mini-lang
+      .language-wrapper
+        display: inline
+        margin-right: 10px
+        a
+          margin-left: 10px
+
+        &:last-child
+          margin-right: 0
+
+  ul.menu li.menu-item
+    margin-right: 24px
+  ul.menu li.menu-item a
+    font-size: 14px
+
+#header-parent-wrapper.light
+  #mini-header
+    .mini-header-wrap:after
+      background-color: #E9E9E9
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Custom Respo
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  #mini-header
+    height: 50px
+    .mini-header-wrap
+      padding: 0 2rem
+    ul.menu li.menu-item
+      margin-right: 20px
+    ul.menu li.menu-item a
+      font-size: 12px
+@media only screen and (max-width: 1230px)
+  #mini-header
+    height: 50px
+    .mini-header-wrap
+      padding: 0 2rem
+    ul.menu li.menu-item
+      margin-right: 20px
+    ul.menu li.menu-item a
+      font-size: 12px

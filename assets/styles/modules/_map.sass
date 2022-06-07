@@ -1,0 +1,72 @@
+.map-section
+  .container
+    margin-top: 200px
+    margin-bottom: 100px
+    .title h2
+      text-align: center
+
+
+  .mapouter
+    position: relative
+    text-align: right
+    width: 100%
+  .gmap_canvas
+    overflow: hidden
+    background: none !important
+    width: 100%
+    .iframes-wrapper
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-around
+      .iframe-wrapp
+        margin-bottom: 2rem
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width: $notebook-max-width) and (max-width: 1450px)
+  .map-section
+    .container
+      iframe
+        max-height: 450px
+        max-width: 450px
+        height: 450px
+        width: 450px
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  .map-section
+    .container
+      max-width: unset !important
+@media screen and (min-width: $tablet-max-width) and (max-width: $small-screens-max-width)
+  .map-section
+    .container
+      max-width: unset
+      margin-top: 180px
+      margin-bottom: 90px
+      iframe
+        max-height: 400px
+        max-width: 400px
+        height: 400px
+        width: 400px
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .map-section
+    .container
+      max-width: unset
+      margin-top: 150px
+      margin-bottom: 80px
+      iframe
+        max-height: 350px
+        max-width: 350px
+        height: 350px
+
+@media screen and (max-width: $mobile-max-width)
+  .map-section
+    .container
+      max-width: unset
+      margin-top: 100px
+      margin-bottom: 50px
+      iframe
+        max-height: 300px
+        max-width: 300px
+        height: 300px
+

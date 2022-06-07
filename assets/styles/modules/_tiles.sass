@@ -1,0 +1,249 @@
+.tiles-section
+  .container
+    max-width: 1320px
+    margin: 0 auto
+    p
+      text-shadow: none
+    .tile-wrapper
+      background: #FFFFFF
+      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.12)
+      border-radius: 20px 20px 0 0
+      margin-top: -290px
+      margin-bottom: 5rem
+      overflow: hidden
+      .tile-row
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: stretch
+        .page-content
+          p
+            font-family: SamoSansProMedium
+          a
+            font-family: SamoSansProBold
+        &.upper
+          padding: 8rem 8rem 4rem 8rem
+          .title
+            h2
+              font-size: 48px
+              line-height: 40px
+              font-family: SamoSansPro
+              font-weight: 300
+              margin-bottom: 1rem
+          .upper-content
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: space-between
+            align-items: flex-end
+            .content-main
+              flex: 1 0 60%
+              max-width: 60%
+            .content-links
+              flex: 1 0 40%
+              text-align: right
+              max-width: 40%
+              .link-wrapper
+                display: inline-block
+                text-align: center
+                padding: 2rem
+                background: rgba(255, 255, 255, 0.2)
+                box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15)
+                border-radius: 20px
+                max-width: 144px
+                max-height: 144px
+                margin-right: 1rem
+                transition: .3s ease-in-out
+                border: 1px solid #fff
+                color: $c-1
+                font-family: SamoSansProMedium
+                &:last-child
+                  margin-right: 0
+                &:hover
+                  box-shadow: none
+                  transform: scale(0.98)
+                  border: 1px solid #d8d8d8
+                img
+                  display: block
+                  margin: 0 auto 2rem auto
+
+
+        &.lower
+          .content-left
+            flex: 1 0 50%
+            max-width: 50%
+            padding: 6rem 4rem 4rem 4rem
+            background-color: $c-secondary
+            color: $c-4
+            a
+              color: inherit
+              font-family: SamoSansPro
+              font-weight: 100
+          .content-right
+            flex: 1 0 50%
+            max-width: 50%
+            padding: 6rem 4rem 4rem 4rem
+            background-color: $c-1
+            color: $c-4
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  .tiles-section
+    .container
+      padding: 0 15px
+      .tile-wrapper
+        .tile-row.upper
+          padding: 5rem 5rem 3rem
+          .title h2
+            font-size: 36px
+          .upper-content
+            align-items: center
+            .content-main
+              flex: 1 0 50%
+              max-width: 50%
+            .content-links
+              max-width: 50%
+              flex: 1 0 50%
+              .link-wrapper
+                margin: 0 1rem
+        .tile-row.lower
+          .content-right
+            .btn
+              margin: 1rem auto
+
+@media screen and (min-width: $tablet-max-width) and (max-width: $small-screens-max-width)
+  .tiles-section
+    .container
+      .tile-wrapper
+        margin-top: -150px
+        margin-bottom: 2rem
+        .tile-row.upper
+          padding: 4rem 4rem 2rem
+          .upper-content
+            align-items: center
+            .content-links
+              text-align: center
+              .link-wrapper
+                margin: 0 0 1rem 0 !important
+        .tile-row.lower
+          .content-right
+            .btn
+              margin: 1rem auto
+
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .tiles-section
+    .container
+      .tile-wrapper
+        border-radius: 0
+        margin-top: -70px
+        margin-bottom: 2rem
+        .tile-row
+          flex-direction: column
+          &.upper
+            padding: 2rem 15px
+            .title
+              h2
+                font-size: 26px
+                line-height: 30px
+            .upper-content
+              flex-direction: column
+              .content-main
+                flex: 1 0 100%
+                max-width: 100%
+                width: 100%
+              .content-links
+                text-align: center
+                margin-top: 2rem
+                flex: 1 0 100%
+                max-width: 100%
+                width: 100%
+                .link-wrapper
+                  padding: 1rem
+                  max-width: 250px
+                  max-height: 250px
+                  margin-right: 0
+                  margin-bottom: 1rem
+                  font-size: 16px
+                  img
+                    margin-bottom: 1rem
+
+          &.lower
+            flex-direction: row
+            .content-left
+              flex: 1 0 50%
+              max-width: 50%
+              width: 50%
+              padding: 2rem 30px
+              text-align: center
+            .content-right
+              flex: 1 0 50%
+              text-align: center
+              max-width: 50%
+              padding: 2rem 30px
+              width: 50%
+            .btn
+              width: 100%
+              display: block
+              margin-bottom: 1rem
+
+
+@media screen and (max-width: $mobile-max-width)
+  .tiles-section
+    .container
+      .tile-wrapper
+        border-radius: 0
+        margin-top: -70px
+        margin-bottom: 2rem
+        .tile-row
+          flex-direction: column
+          &.upper
+            padding: 2rem 15px
+            .title
+              h2
+                font-size: 24px
+                line-height: 28px
+            .upper-content
+              flex-direction: column
+              .content-main
+                flex: 1 0 100%
+                max-width: 100%
+                width: 100%
+              .content-links
+                text-align: center
+                margin-top: 2rem
+                flex: 1 0 100%
+                max-width: 100%
+                width: 100%
+                .link-wrapper
+                  padding: .5rem
+                  max-width: 100px
+                  max-height: 100px
+                  margin-right: 0
+                  margin-bottom: 1rem
+                  font-size: 14px
+                  img
+                    margin-bottom: 1rem
+
+          &.lower
+            .content-left
+              flex: 1 0 100%
+              max-width: 100%
+              width: 100%
+              padding: 2rem 15px
+              text-align: center
+            .content-right
+              flex: 1 0 100%
+              text-align: center
+              max-width: 100%
+              padding: 2rem 15px
+              width: 100%
+            .btn
+              width: 100%
+              display: block
+              margin-bottom: 1rem
+
+

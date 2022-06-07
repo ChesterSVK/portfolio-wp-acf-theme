@@ -1,0 +1,124 @@
+.two-columns-text-section
+  .container
+    max-width: 1286px
+    margin: 0 auto
+    padding-bottom: 6rem
+    .subtitle h3
+      max-width: 626px
+      margin: 0 auto
+      font-size: 18px
+      line-height: 30px
+      text-align: center
+      color: #a6a6a6
+      margin-bottom: 2rem
+    .title h2
+      text-align: center
+    .columns-wrapper
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+      align-items: stretch
+      .column-left
+        flex: 1 0 50%
+        max-width: 50%
+        .content
+          p
+            font-size: 18px
+            line-height: 40px
+          a
+            line-height: 34px
+          small
+            font-size: 16px
+            line-height: 40px
+            color: #7e7e7e
+      .column-right
+        flex: 1 0 50%
+        max-width: 50%
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width: $tablet-max-width) and (max-width: $small-screens-max-width)
+  .two-columns-text-section
+    padding: 30px
+    .container
+      padding-bottom: 2rem
+      .title h2
+        margin: 3rem 0
+      .page-content
+        padding: 15px
+        .btn
+          margin: 1rem auto
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .two-columns-text-section
+    padding: 15px
+    .container
+      padding-bottom: 2rem
+      .title h2
+        margin: 2rem 0
+
+      .subtitle h3
+        font-size: 16px
+        line-height: 20px
+        margin-bottom: 1rem
+      .columns-wrapper
+        flex-direction: column
+        .btn.effect-btn
+          width: 100%
+          max-width: 300px
+          padding-left: 1rem
+          padding-right: 1rem
+          margin-bottom: 2rem
+        .page-content
+          text-align: center
+        .column-left
+          flex: 1 0 100%
+          max-width: 100%
+          width: 100%
+          .content
+            p
+              font-size: 16px
+              line-height: 20px
+            small
+              font-size: 14px
+              line-height: 20px
+        .column-right
+          flex: 1 0 100%
+          max-width: 100%
+          width: 100%
+@media screen and (max-width: $mobile-max-width)
+  .two-columns-text-section
+    padding: 0 15px
+    .container
+      padding-bottom: 2rem
+      .title h2
+        margin: 2rem 0
+
+      .subtitle h3
+        font-size: 16px
+        line-height: 20px
+        margin-bottom: 1rem
+      .columns-wrapper
+        flex-direction: column
+        .btn.effect-btn
+          width: 100%
+          margin-bottom: 2rem
+        .page-content
+          text-align: center
+        .column-left
+          flex: 1 0 100%
+          max-width: 100%
+          width: 100%
+          .content
+            p
+              font-size: 16px
+              line-height: 20px
+            small
+              font-size: 14px
+              line-height: 20px
+        .column-right
+          flex: 1 0 100%
+          max-width: 100%
+          width: 100%
+

@@ -1,0 +1,410 @@
+body.home .side-socials
+  position: fixed
+  right: 1em
+  top: 40%
+  display: flex
+  flex-direction: column
+  align-items: center
+  z-index: 100
+
+  a.icon
+    background: #fff
+    margin-bottom: .5rem
+
+body:not(.home) .side-socials
+  display: none !important
+
+footer#pageFooter.light:not(.dark)
+  border-top: 1px solid rgba(222, 222, 222, 0.8)
+
+  .footer-row
+    .footer-right
+      .tnp-subscription-minimal input.tnp-email
+          background: $c-4 !important
+          color: $c-1 !important
+      .tnp-subscription-minimal input.tnp-submit
+          background: $c-2 !important
+
+    .footer-left #text-2.widget_text p
+      color: $c-1
+    .img-parent:not(.layout-dark),
+    img:not(.layout-dark)
+      display: inline-block
+
+    .img-parent.layout-dark,
+    img.layout-dark
+      display: none !important
+
+
+    ul.menu li.menu-item a
+      color: $c-1
+      font-weight: normal
+
+      &:hover
+        color: $c-1
+
+    ul.menu li.current-menu-item
+      a
+        font-weight: bold
+        color: $c-1
+
+
+footer#pageFooter.dark:not(.light)
+  .footer-row
+    .footer-right
+      .tnp-subscription-minimal input.tnp-email
+        background: $c-1 !important
+        color: $c-4 !important
+      .tnp-subscription-minimal input.tnp-submit
+        background: $c-2 !important
+
+    .img-parent:not(.layout-dark),
+    img:not(.layout-dark)
+      display: none !important
+
+    .img-parent.layout-dark,
+    img.layout-dark
+      display: inline-block
+
+    ul.menu li.menu-item
+      margin-right: 40px
+    ul.menu li.menu-item:last-child
+      margin-right: 0
+    ul.menu li.menu-item a
+      color: $c-4
+      font-weight: normal
+
+      &:hover
+        color: $c-secondary
+
+    ul.menu li.current-menu-item
+      a
+        font-weight: bold
+        color: $c-secondary
+  .footer-copy
+    background-color: rgba(169, 169, 169, 0.2)
+
+footer#pageFooter
+  position: relative
+  padding-top: 5rem
+  .container
+    max-width: 1450px
+
+  ul.menu
+    padding-top: 4em
+    li.menu-item:last-child
+      margin-right: 0
+    li.menu-item
+      margin-right: 70px
+    li.menu-item a
+      font-size: 16px
+      line-height: 18px
+      font-family: SamoSansProMedium
+
+
+  .widget-title
+    color: $c-secondary
+
+  .footer-row
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 2rem
+
+    .footer-left
+      #text-2.widget_text
+        div
+          display: inline-block
+          margin-right: 20px
+          padding-right: 20px
+          position: relative
+          &:nth-child(2n):after,
+          &:last-child:after
+            display: none
+            content: none
+        p
+          color: $c-4
+          font-size: 18px
+          line-height: 20px
+        small
+          font-size: 12px
+          line-height: 14px
+
+
+    .footer-right
+      .widget-title
+        font-family: SamoSansProBold
+        margin-bottom: 1rem
+      .tnp-subscription-minimal
+        border: 0.5px solid #FFFFFF
+        position: relative
+        input.tnp-email
+          font-family: SamoSansPro
+          outline: none
+          display: block
+        input.tnp-submit
+          font-family: SamoSansProBold
+          position: absolute
+          right: 0
+          top: 0
+          width: 30%
+          height: 41px
+
+
+  .footer-copy
+    background-color: #000000
+    color: $c-4
+    margin-top: 4rem
+
+    .footer-row
+      margin: 0 !important
+
+    .socials a
+      display: inline-block
+      color: $c-4
+      font-size: 0
+      margin-left: 15px
+
+    .copy
+      padding: 15px 0
+      p, span
+        font-weight: normal
+        font-size: 16px
+        line-height: 18px
+
+      p
+        display: inline
+      a
+        color: $c-4
+
+        &:hover
+          color: $c-secondary
+
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  .side-socials a.icon.style-1
+    width: 40px
+    height: 40px
+    &:before
+      top: 8px
+      width: 50%
+  footer#pageFooter
+    .footer-row
+      .footer-left #text-2.widget_text p
+        font-size: 16px
+      ul.menu
+        li.menu-item
+          margin-right: 20px !important
+          a
+            font-size: 14px !important
+      .footer-copy .copy p
+        font-size: 14px
+
+@media screen and (min-width: $tablet-max-width) and (max-width: $small-screens-max-width)
+  footer#pageFooter.dark:not(.light)
+    .footer-row
+      ul.menu li.menu-item
+        margin-right: 0
+      ul.menu li.menu-item:last-child
+        margin-right: 0
+      ul.menu li.menu-item a
+        font-size: 16px
+        line-height: 20px
+  footer#pageFooter
+    padding-top: 1rem
+    .textwidget img
+      margin: 1rem 0
+    .container
+      padding: 15px
+    ul.menu
+      padding-top: 4em
+      display: flex
+      flex-wrap: wrap
+      flex-direction: row
+
+      li.menu-item:last-child
+        margin-right: 0
+      li.menu-item
+        text-align: center
+        flex: 1 0 33.33%
+        max-width: 33.33%
+        min-height: 50px
+        margin-right: 0
+
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  footer#pageFooter.dark:not(.light)
+    .footer-row
+      ul.menu li.menu-item
+        margin-right: 0
+      ul.menu li.menu-item:last-child
+        margin-right: 0
+      ul.menu li.menu-item a
+        font-size: 16px
+        line-height: 20px
+  footer#pageFooter
+    padding-top: 1rem
+    .textwidget img
+      margin: 1rem 0
+    .container
+      padding: 15px
+    ul.menu
+      padding-top: 1em
+      display: flex
+      flex-wrap: wrap
+      flex-direction: row
+      li.menu-item:last-child
+        margin-right: 0
+      li.menu-item
+        flex: 1 0 16.66%
+        max-width: 16.66%
+        min-height: 50px
+        margin-right: 0
+      li.menu-item a
+        font-size: 16px
+        line-height: 18px
+    .footer-row
+      display: block
+      flex-direction: unset
+      flex-wrap: unset
+      justify-content: unset
+      align-items: unset
+      text-align: center
+      .footer-left
+        #text-2.widget_text
+          div
+            margin: 0
+            padding: 0
+          p
+            font-size: 16px
+            line-height: 20px
+          small
+            font-size: 12px
+            line-height: 14px
+
+@media screen and (max-width: $tablet-max-width)
+  .side-socials
+    display: none !important
+  footer#pageFooter.dark:not(.light)
+    .footer-row
+      ul.menu li.menu-item
+        margin-right: 0
+      ul.menu li.menu-item:last-child
+        margin-right: 0
+      ul.menu li.menu-item a
+        font-size: 16px
+        line-height: 20px
+  footer#pageFooter
+    padding-top: 1rem
+    .textwidget img
+      margin: 1rem 0
+    .container
+      padding: 15px
+    ul.menu
+      padding-top: 1em
+      display: flex
+      flex-wrap: wrap
+      flex-direction: row
+      li.menu-item:last-child
+        margin-right: 0
+      li.menu-item
+        flex: 1 0 33.33%
+        max-width: 33.33%
+        min-height: 50px
+        margin-right: 0
+      li.menu-item a
+        font-size: 16px
+        line-height: 18px
+    .footer-row
+      display: block
+      flex-direction: unset
+      flex-wrap: unset
+      justify-content: unset
+      align-items: unset
+      text-align: center
+      .footer-left
+        #text-2.widget_text
+          div
+            margin: 0
+            padding: 0
+          p
+            font-size: 16px
+            line-height: 20px
+          small
+            font-size: 12px
+            line-height: 14px
+    .footer-copy
+      margin-top: 1rem
+      .socials a
+        margin: 0
+      .copy
+        p, span
+          display: block
+          margin: 0
+          font-weight: normal
+          font-size: 16px
+          line-height: 20px
+@media only screen and (max-width: $mobile-max-width)
+  .side-socials
+    display: none !important
+
+  footer#pageFooter.dark:not(.light)
+    .footer-row
+      ul.menu li.menu-item
+        margin-right: 0
+      ul.menu li.menu-item:last-child
+        margin-right: 0
+      ul.menu li.menu-item a
+        font-size: 16px
+        line-height: 20px
+  footer#pageFooter
+    padding-top: 1rem
+    .textwidget img
+      margin: 1rem 0
+    .container
+      padding: 15px
+    ul.menu
+      padding-top: 1em
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      align-items: center
+      li.menu-item:last-child
+        margin-right: 0
+      li.menu-item
+        flex: 1 0 50%
+        max-width: 50%
+        min-height: 50px
+        margin-right: 0
+      li.menu-item a
+        font-size: 16px
+        line-height: 18px
+    .footer-row
+      display: block
+      flex-direction: unset
+      flex-wrap: unset
+      justify-content: unset
+      align-items: unset
+      text-align: center
+      .footer-left
+        #text-2.widget_text
+          div
+            margin: 0
+            padding: 0
+          p
+            font-size: 16px
+            line-height: 20px
+          small
+            font-size: 12px
+            line-height: 14px
+    .footer-copy
+      margin-top: 1rem
+      .socials a
+        margin: 0
+      .copy
+        p, span
+          display: block
+          margin: 0
+          font-weight: normal
+          font-size: 16px
+          line-height: 20px

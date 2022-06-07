@@ -1,0 +1,309 @@
+.list-offers-section
+  margin-top: 5rem
+
+article.type-offer
+  max-width: 1320px
+  margin: 0 auto 2rem auto
+  .offer-info
+    background: #fff
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1)
+    padding: 3rem 4rem
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-content: stretch
+    justify-content: space-between
+    align-items: stretch
+    .offer-left
+      flex: 1 0 70%
+      max-width: 70%
+      .offer-title
+        font-weight: 500
+        font-size: 28px
+        line-height: 46px
+        margin-bottom: 3rem
+      .offer-meta
+        dl
+          dt, dd
+            display: inline-block
+            font-size: 18px
+            line-height: 20px
+          abbr
+            text-decoration: none
+            font-size: 18px
+            line-height: 20px
+            color: $c-1
+          dd
+            margin-bottom: 1em
+            margin-inline-start: 20px
+
+    .offer-right
+      position: relative
+      flex: 1 0 30%
+      max-width: 30%
+      .offer-salary
+        position: absolute
+        top: -3rem
+        right: 0
+        left: 0
+        margin: 0 auto
+        background-color: $c-secondary
+        color: $c-4
+        width: 156px
+        height: 169px
+        text-align: center
+        padding: 2rem 0
+        p
+          margin: 0 !important
+          font-weight: 500
+          font-size: 18px
+          line-height: 46px
+          strong
+            font-family: SamoSansProBold
+            font-weight: bold
+            font-size: 22px
+            line-height: 46px
+      .offer-link-btn
+        display: block
+        max-width: 240px
+        margin: 0 auto
+        margin-top: 169px
+        width: 100%
+        text-align: center
+        padding: 1.3rem 2rem
+
+article.type-offer.single-offer
+  .offer-details
+    max-width: 950px
+    margin: 0 auto
+  .offer-subtitle
+    text-align: center
+    margin: 1rem auto
+    display: block
+    padding: 5px 2rem
+    background: $c-secondary
+    color: $c-4
+    font-size: 18px
+    line-height: 20px
+    font-family: SamoSansProBold
+    font-weight: bold
+    text-transform: uppercase
+    max-width: 170px
+  .offer-title
+    font-weight: bold
+    font-size: 34px
+    line-height: 40px
+    font-family: SamoSansProBold
+    text-align: center
+    margin-bottom: 4rem
+  .offer-info
+    box-shadow: none
+    padding: 0
+    flex-direction: column
+  .offer-wrap
+    max-width: 1320px
+    margin: 0 auto
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-content: stretch
+    justify-content: space-between
+    align-items: flex-start
+    .offer-info
+      .offer-left
+        flex: 1 0 100%
+        max-width: 100%
+        margin-bottom: 3rem
+      .offer-right
+        flex: 1 0 100%
+        max-width: 100%
+        .offer-salary
+          display: none
+        .offer-link
+          .offer-link-btn
+            display: block
+            max-width: 240px
+            margin: 1rem 0
+            padding: 1.3rem 1rem
+
+
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  article.type-offer.single-offer
+    .offer-wrap
+      max-width: 1000px
+      margin: 0 auto
+      .offer-info,
+      .offer-details
+        max-width: 50%
+  article.type-offer .offer-info .offer-right .offer-link-btn
+    padding: 1rem 1.5rem
+
+@media screen and (min-width: $mobile-max-width) and (max-width: $small-screens-max-width)
+  .list-offers-section
+    margin-top: 2rem
+
+  article.type-offer
+    .offer-info
+      padding: 1rem 2rem
+      flex-direction: column
+      .offer-left
+        flex: 1 0 100%
+        max-width: 100%
+        width: 100%
+        .offer-title
+          font-size: 18px
+          line-height: 22px
+          margin-bottom: 1rem
+        .offer-meta
+          dl
+            dt
+              position: absolute
+            dt, dd
+              font-size: 16px
+              line-height: 20px
+            abbr
+              font-size: 16px
+              line-height: 20px
+            dd
+              margin-left: 30px
+              margin-bottom: .5em
+      .offer-right
+        position: relative
+        flex: 1 0 100%
+        max-width: 100%
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        align-items: flex-start
+        justify-content: space-between
+        .offer-salary
+          position: static
+          margin: 0 auto
+          max-width: 50%
+          flex: 1 0 50%
+          text-align: center
+          padding: .8rem 0
+          height: 64px
+          p
+            font-size: 16px
+            line-height: 20px
+            strong
+              font-size: 16px
+              line-height: 20px
+        .offer-link
+          flex: 1 0 50%
+          max-width: 50%
+          .offer-link-btn
+            height: 64px
+            padding: .8rem 0
+            line-height: 36px
+            font-size: 16px
+            margin-top: 0
+
+  article.type-offer.single-offer
+    padding: 50px 15px 15px 15px
+    .offer-subtitle
+      margin: .5rem auto
+      padding: 5px 1rem
+      font-size: 16px
+      line-height: 20px
+    .offer-title
+      font-size: 22px
+      line-height: 26px
+      margin-bottom: 2rem
+    .offer-wrap
+      flex-direction: column
+      .offer-info
+        .offer-left
+          flex: 1 0 100%
+          max-width: 100%
+          margin-bottom: 2rem
+        .offer-right
+          .offer-link
+            .offer-link-btn
+              display: block
+              max-width: 240px
+              margin: 1rem auto
+
+  article.type-offer.single-offer
+    .offer-wrap
+      align-content: center
+      .offer-details
+        margin-top: 3rem
+@media screen and (max-width: $mobile-max-width)
+  .list-offers-section
+    margin-top: 2rem
+
+  article.type-offer
+    .offer-info
+      padding: 1rem 2rem
+      flex-direction: column
+      .offer-left
+        flex: 1 0 100%
+        max-width: 100%
+        width: 100%
+        .offer-title
+          font-size: 18px
+          line-height: 22px
+          margin-bottom: 1rem
+        .offer-meta
+          dl
+            dt
+              position: absolute
+            dt, dd
+              font-size: 16px
+              line-height: 20px
+            abbr
+              font-size: 16px
+              line-height: 20px
+            dd
+              margin-left: 30px
+              margin-bottom: .5em
+      .offer-right
+        position: relative
+        flex: 1 0 100%
+        max-width: 100%
+        width: 100%
+        .offer-salary
+          position: static
+          margin: 0 auto
+          width: 100%
+          height: auto
+          text-align: center
+          padding: 1rem 0
+          p
+            font-size: 16px
+            line-height: 20px
+            strong
+              font-size: 16px
+              line-height: 20px
+        .offer-link-btn
+          margin-top: 20px
+
+  article.type-offer.single-offer
+    padding: 50px 15px 15px 15px
+    .offer-wrap
+      .offer-details
+        margin-top: 3rem
+    .offer-subtitle
+      margin: .5rem auto
+      padding: 5px 1rem
+      font-size: 16px
+      line-height: 20px
+    .offer-title
+      font-size: 22px
+      line-height: 26px
+      margin-bottom: 2rem
+    .offer-wrap
+      flex-direction: column
+      .offer-info
+        .offer-left
+          flex: 1 0 100%
+          max-width: 100%
+          margin-bottom: 2rem
+        .offer-right
+          .offer-link
+            .offer-link-btn
+              display: block
+              max-width: 240px
+              margin: 1rem auto

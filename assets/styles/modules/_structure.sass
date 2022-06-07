@@ -1,0 +1,113 @@
+.organizational-structure
+  margin: 195px 0 0 0
+  text-align: center
+  .structure-items
+    max-width: 1450px
+    margin: 0 auto
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-around
+    align-items: flex-start
+    .structure-item
+      flex: 1 0 33%
+      max-width: 33%
+      margin-bottom: 6rem
+      .title
+        font-family: SamoSansProMedium
+        color: $c-secondary
+        font-weight: normal
+        font-size: 22px
+        line-height: 20px
+      .name
+        font-family: SamoSansProMedium
+        color: $c-1
+        font-size: 34px
+        line-height: 50px
+        margin-bottom: 3rem
+      a
+        font-weight: normal
+        font-size: 22px
+        line-height: 30px
+        color: #696969
+        display: block
+        transition: .3s ease-in-out
+        &:hover
+          color: $c-secondary
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  .organizational-structure
+    .structure-items
+      .structure-item
+        .title
+          font-size: 22px
+        .name
+          font-size: 26px
+        a
+          font-size: 16px
+
+@media screen and (min-width: $tablet-max-width) and (max-width: $small-screens-max-width)
+  .organizational-structure
+    margin: 80px 0 0 0
+    .structure-items
+      .structure-item
+        flex: 1 0 50%
+        max-width: 50%
+        width: 50%
+        margin-bottom: 2rem
+        .title
+          font-size: 16px
+          line-height: 20px
+        .name
+          font-size: 24px
+          line-height: 28px
+          margin-bottom: 1rem
+        a
+          font-size: 16px
+          line-height: 20px
+
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .organizational-structure
+    margin: 80px 0 0 0
+    .structure-items
+      .structure-item
+        flex: 1 0 50%
+        max-width: 50%
+        width: 50%
+        margin-bottom: 2rem
+        .title
+          font-size: 16px
+          line-height: 20px
+        .name
+          font-size: 24px
+          line-height: 28px
+          margin-bottom: 1rem
+        a
+          font-size: 16px
+          line-height: 20px
+@media screen and (max-width: $mobile-max-width)
+  .organizational-structure
+    margin: 50px 0 0 0
+    .structure-items
+      flex-direction: column
+      .structure-item
+        flex: 1 0 100%
+        max-width: 100%
+        width: 100%
+        margin-bottom: 2rem
+        .title
+          font-size: 16px
+          line-height: 20px
+        .name
+          font-size: 24px
+          line-height: 28px
+          margin-bottom: 1rem
+        a
+          font-size: 16px
+          line-height: 20px
+
+

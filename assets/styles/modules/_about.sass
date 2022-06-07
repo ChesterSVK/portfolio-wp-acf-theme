@@ -1,0 +1,23 @@
+#ajax-about #ajax-links-cube-content-tabs .async-target
+  display: none
+
+#ajax-about #ajax-links-cube-content-tabs .async-target.active
+    display: block
+
+.section.about
+  margin: 230px 0 3rem 0
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media screen and (min-width: $tablet-max-width) and (max-width: $small-screens-max-width)
+  .section.about
+    margin: 100px 0 0 0
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .section.about
+    margin: 20px 0 0 0
+@media screen and (max-width: $mobile-max-width)
+  .section.about
+    margin: 10px 0 0 0
+

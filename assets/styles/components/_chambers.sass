@@ -1,0 +1,246 @@
+.list-chambers-section
+  max-width: 1300px
+  margin: 8rem auto
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-content: space-between
+  justify-content: space-between
+  align-items: stretch
+  article.type-chamber
+    max-width: 600px
+    flex: 1 0 50%
+    a
+      display: block
+      position: relative
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        width: 100%
+        height: 0
+        left: 0
+        right: 0
+        bottom: 0
+        margin: 0 auto
+        border-right: 1px solid #ffffff
+        border-left: 1px solid #ffffff
+        transition: .3s ease-in-out
+      &:hover
+        &:after
+          height: 100%
+        .chamber-title
+          background-color: $c-4
+          color: $c-secondary
+
+      .chamber-header
+        border-bottom: 1px solid $c-secondary
+        img
+          margin-bottom: 0
+          object-fit: cover
+          height: 313px
+
+      .chamber-title
+        font-family: SamoSansPro
+        text-transform: uppercase
+        transition: .3s ease-in-out
+        padding: 1.5rem 2rem
+        background-color: #151515
+        font-weight: 500
+        font-size: 24px
+        line-height: 26px
+        text-align: center
+
+        color: $c-4
+.page-id-441,
+article.type-chamber.single-view
+  background-image: url("./assets/img/chamber-bg.jpg")
+  background-position: center center
+  background-repeat: no-repeat
+
+article.type-chamber.single-view
+  padding-bottom: 6rem
+  .chamber-wrapper
+    max-width: 1282px
+    margin: 0 auto
+    .chamber-banner
+      margin-bottom: 6rem
+      img
+        max-width: 1282px
+        height: 380px
+        object-fit: cover
+        width: 100%
+    .chamber-title
+      font-family: SamoSansProMedium
+      text-align: center
+      font-size: 36px
+      line-height: 40px
+      text-transform: uppercase
+      margin: 3rem 0
+      display: block
+    .chamber-content
+      font-size: 18px
+      line-height: 40px
+      max-width: 860px
+      margin: 6rem auto
+      strong, a
+        color: $c-secondary
+
+    .chamber-members
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+      align-items: stretch
+      border-bottom: 2px solid $c-secondary
+      padding: 1rem 2rem
+      margin: 4rem 0
+      .chamber-member
+        max-width: 220px
+        text-align: center
+        .member-title
+          font-size: 24px
+          line-height: 30px
+          color: #c2c2c2
+        .member-position
+          color: $c-secondary
+          font-size: 18px
+          line-height: 24px
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Respo
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+
+  .list-chambers-section
+    article.type-chamber
+      max-width: 520px
+      a .chamber-header img
+        height: 270px
+
+@media screen and (min-width: $tablet-max-width) and (max-width: $small-screens-max-width)
+  .list-chambers-section
+    margin: 2rem auto
+    article.type-chamber
+      max-width: 400px
+      .chamber-header
+        max-height: 450px
+        img
+          max-height: 450px
+          object-fit: cover
+          margin-bottom: 0 !important
+  article.type-chamber.single-view
+    padding: 15px
+    padding-bottom: 2rem
+    .chamber-wrapper
+      .chamber-banner
+        width: 100%
+        margin: 0 -15px 2rem -15px
+        img
+          width: 100%
+          height: auto
+
+      .chamber-title
+        font-size: 26px
+        line-height: 30px
+        margin: 0
+      .chamber-content
+        font-size: 16px
+        line-height: 20px
+        margin: 2rem auto
+        max-width: 500px
+      .chamber-members
+        display: flex
+        margin: 2rem 0
+        .chamber-member
+          max-width: 33.33%
+          flex: 1 0 33.33%
+
+          .member-title
+            font-size: 22px
+            line-height: 28px
+          .member-position
+            font-size: 18px
+            line-height: 22px
+
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .list-chambers-section
+    margin: 2rem auto
+    article.type-chamber
+      max-width: 50%
+      .chamber-header
+        max-height: 150px
+        img
+          max-height: 150px
+          object-fit: cover
+          margin-bottom: 0 !important
+  article.type-chamber.single-view
+    padding: 15px
+    padding-bottom: 2rem
+    .chamber-wrapper
+      .chamber-banner
+        width: 100%
+        margin: 0 -15px 2rem -15px
+        img
+          width: 100%
+          height: auto
+
+      .chamber-title
+        font-size: 26px
+        line-height: 30px
+        margin: 0
+      .chamber-content
+        font-size: 16px
+        line-height: 20px
+        margin: 2rem auto
+        max-width: 500px
+      .chamber-members
+        display: flex
+        margin: 2rem 0
+        .chamber-member
+          max-width: 50%
+          flex: 1 0 50%
+
+          .member-title
+            font-size: 20px
+            line-height: 26px
+          .member-position
+            font-size: 16px
+            line-height: 20px
+@media screen and (max-width: $mobile-max-width)
+  .list-chambers-section
+    margin: 2rem auto
+    flex-direction: column
+    article.type-chamber
+      flex: 1 0 100%
+  article.type-chamber.single-view
+    padding: 15px
+    padding-bottom: 2rem
+    .chamber-wrapper
+      .chamber-banner
+        width: 100%
+        margin: 0 -15px 2rem -15px
+        img
+          width: 100%
+          height: auto
+
+      .chamber-title
+        font-size: 26px
+        line-height: 30px
+        margin: 0
+      .chamber-content
+        font-size: 16px
+        line-height: 20px
+        margin: 2rem auto
+      .chamber-members
+        display: flex
+        flex-direction: column
+        margin: 2rem 0
+        .chamber-member
+          .member-title
+            font-size: 20px
+            line-height: 26px
+          .member-position
+            font-size: 16px
+            line-height: 20px
+

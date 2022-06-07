@@ -1,0 +1,75 @@
+.partners-section
+  margin-top: 6rem
+  .container
+    .title h2
+      text-align: center
+    .partner-items
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+      .partner-item
+        text-align: center
+        max-height: 170px
+        padding: 0 3rem
+        flex: 1 0 20%
+        max-width: 20%
+        margin-bottom: 3rem
+        transition: opacity .3s ease-in-out
+        &:hover
+          cursor: pointer
+          opacity: .7
+        a
+          margin: 0 auto
+          max-width: 150px
+          max-height: 100px
+          display: block
+          width: 100%
+        img
+          filter: grayscale(100%)
+          width: 100%
+          max-width: 150px
+          max-height: 90px
+          height: auto
+          object-fit: contain
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .partners-section
+    margin-top: 3rem
+    padding-bottom: 3rem
+    .container
+      .partner-items
+        flex-direction: row
+        .partner-item
+          flex: 1 0 33.33%
+          max-height: 170px
+          max-width: 170px
+          padding: 0
+          margin: 1rem auto
+          img
+            width: 100%
+            height: auto
+@media screen and (max-width: $mobile-max-width)
+  .partners-section
+    margin-top: 3rem
+    padding-bottom: 3rem
+    .container
+      .partner-items
+        flex-direction: row
+        .partner-item
+          flex: 1 0 50%
+          max-height: 170px
+          max-width: 50%
+          padding: 0
+          margin: 1rem auto
+          text-align: center
+          img
+            max-width: 120px
+            width: 100%
+            height: auto
+

@@ -1,0 +1,93 @@
+.hero-section
+  height: 790px
+  display: flex
+  flex-direction: row
+  align-items: center
+  position: relative
+  .hero-bg
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    object-position: top
+    object-fit: cover
+    z-index: -1
+  .container
+    max-width: 956px
+    width: 100%
+    margin: 0 auto
+    color: $c-4
+    padding-bottom: 5rem
+    .title h2
+      margin-bottom: 0
+    .subtitle h4
+      font-weight: bold
+      font-size: 18px
+      line-height: 20px
+      font-family: SamoSansProBold
+      text-align: center
+      padding: 10px 2rem
+      margin-bottom: 1rem
+      background-color: $c-secondary
+      display: inline-block
+    .description h5
+      font-weight: 100
+      font-size: 28px
+      line-height: 40px
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  .hero-section
+    .container
+      padding: 0 15px
+
+@media screen and (min-width: $tablet-max-width) and (max-width: $small-screens-max-width)
+  .hero-section
+    height: 500px
+    padding: 0 15px
+
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .hero-section
+    height: 350px
+    padding: 0 15px
+    .container
+      max-width: 956px
+      width: 100%
+      margin: 0 auto
+      color: $c-4
+      padding-bottom: 2rem
+      .subtitle h4
+        font-size: 16px
+        line-height: 20px
+        padding: 10px 1rem
+        margin-bottom: 1rem
+      .description h5
+        font-weight: 100
+        font-size: 20px
+        line-height: 24px
+@media screen and (max-width: $mobile-max-width)
+  .hero-section
+    height: 290px
+    padding: 0 15px
+    .container
+      max-width: 956px
+      width: 100%
+      margin: 0 auto
+      color: $c-4
+      padding-bottom: 2rem
+      .subtitle h4
+        font-size: 16px
+        line-height: 20px
+        padding: 10px 1rem
+        margin-bottom: 1rem
+      .description h5
+        font-weight: 100
+        font-size: 20px
+        line-height: 24px
+

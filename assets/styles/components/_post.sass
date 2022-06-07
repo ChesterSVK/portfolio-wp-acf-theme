@@ -1,0 +1,248 @@
+
+
+body.dark
+  article.type-post
+    border-bottom: 1px solid rgba(105, 105, 105, 0.51)
+    .post-header
+      .post-category
+        color: $c-4
+    .post-title
+      color: $c-4 !important
+    .post-meta
+      .post-date
+        color: $c-secondary
+    .post-excerpt
+      color: #A9A9A9 !important
+      a
+        color: $c-secondary
+  .no-posts-title
+    color: $c-4
+
+body.light
+  .no-posts-title
+    color: $c-1
+
+  article.type-post
+    max-width: 1274px
+    margin: 0 auto 3rem auto
+    border: 0
+    padding: 3rem
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06)
+
+    .post-left
+      max-width: 500px
+    .post-header
+      .post-category
+        color: $c-secondary
+        background-color: $c-4
+        border: 1px solid $c-secondary
+    .post-title
+        color: $c-1
+    .post-meta
+      .post-date
+        color: $c-secondary
+    .post-excerpt
+      p
+        color: #727272
+      a
+        color: $c-secondary
+
+  .list-posts-section
+    margin-top: 8rem
+    .show-all-btn
+      @extend .effect-btn
+      @extend .gray
+      margin: 0 auto !important
+      display: block !important
+      width: 100%
+      text-align: center
+      max-width: 307px
+
+.news-section
+  margin: 14rem 0
+
+.no-posts-title
+  text-align: center
+  margin-bottom: 4rem
+.post-pagination
+  text-align: center
+  margin: 4rem 0
+
+article.type-post
+  padding-bottom: 5rem
+  margin-bottom: 5rem
+
+  .post-header
+    margin-bottom: 2rem
+    .post-category
+      display: inline-block
+      padding: 6px 22px
+      font-style: normal
+      font-weight: 500
+      font-size: 12px
+      line-height: 13px
+      text-align: center
+      background: #000
+      border: 1px solid #fff
+  .post-info
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: stretch
+    .post-left
+      flex: 1 0 67%
+      max-width: 745px
+    .post-right
+      flex: 1 0 33%
+      max-width: 33%
+
+    .wp-post-image
+      max-width: 440px
+      max-height: 378px
+      margin: -3rem auto 0 auto
+      width: 100%
+      height: auto
+      object-fit: contain
+
+    .post-title
+      margin-bottom: 2rem
+      font-family: "SamoSansProMedium"
+      font-style: normal
+      font-weight: 500
+      font-size: 28px
+      line-height: 34px
+    .post-meta
+      .post-date
+        font-family: SamoSansProMedium
+        margin-bottom: 1rem
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 20px
+    .post-excerpt
+      margin-bottom: 2rem
+      p
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 24px
+        color: #A9A9A9
+    .post-link
+      .post-link-btn
+        @extend .btn-primary
+
+article.type-post.category-grant-ehp
+  .post-category
+    color: #0A4EA2 !important
+    border-color: #0A4EA2 !important
+
+@media only screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  article.type-post
+    .post-info
+      .post-title
+        font-size: 26px
+      .post-excerpt p
+        font-size: 16px
+
+@media screen and (min-width: $mobile-max-width) and (max-width: $small-screens-max-width)
+  body.light
+    article.type-post
+      margin: 0 auto 2rem auto
+      padding: 2rem
+    .list-posts-section
+      margin-top: 3rem
+    .news-section
+      margin: 50px 0 0 0
+
+    article.type-post
+      padding-bottom: 2rem
+      margin-bottom: 2rem
+
+      .post-header
+        margin-bottom: 1rem
+        .post-category
+          padding: 6px 15px
+      .post-info
+        .post-left
+          flex: 1 0 50%
+          width: 50%
+          max-width: 745px
+        .post-right
+          flex: 1 0 50%
+          max-width: 50%
+          width: 50%
+
+        .wp-post-image
+          margin-top: 0
+          padding-left: 2rem
+          max-width: 300px
+          max-height: 278px
+        .post-title
+          margin-bottom: 1rem
+          font-size: 22px
+          line-height: 26px
+        .post-meta
+          .post-date
+            margin-bottom: .5rem
+        .post-excerpt
+          margin-bottom: 1rem
+          p
+            font-size: 16px
+            line-height: 20px
+    .list-posts-section
+      .show-all-btn
+        width: 100%
+        display: block
+@media only screen and (max-width: $mobile-max-width)
+  body.light
+    article.type-post
+      margin: 0 auto 2rem auto
+      padding: 2rem
+    .list-posts-section
+      margin-top: 3rem
+  .news-section
+    margin: 50px 0 0 0
+
+  article.type-post
+    padding-bottom: 2rem
+    margin-bottom: 2rem
+
+    .post-header
+      margin-bottom: 1rem
+      .post-category
+        padding: 6px 15px
+    .post-info
+      flex-direction: column
+      .post-left
+        flex: 1 0 100%
+        width: 100%
+        max-width: 745px
+      .post-right
+        flex: 1 0 100%
+        max-width: 100%
+        width: 100%
+
+      .wp-post-image
+        margin-top: 0
+        max-width: 100%
+        max-height: 278px
+      .post-title
+        margin-bottom: 1rem
+        font-size: 22px
+        line-height: 26px
+      .post-meta
+        .post-date
+          margin-bottom: .5rem
+      .post-excerpt
+        margin-bottom: 1rem
+        p
+          font-size: 16px
+          line-height: 20px
+      .post-link
+        .post-link-btn
+          width: 100%
+  .list-posts-section
+    .show-all-btn
+      width: 100%
+      display: block

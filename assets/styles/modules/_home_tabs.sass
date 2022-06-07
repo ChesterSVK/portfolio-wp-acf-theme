@@ -1,0 +1,165 @@
+.home-tabs-section
+  margin-top: -10%
+  position: relative
+  z-index: 1
+
+  .title-section
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-content: center
+    justify-content: space-between
+    align-items: center
+    .title h2
+      color: $c-4
+      letter-spacing: 2px
+      font-style: normal
+      font-weight: 600
+      font-size: 60px
+      line-height: 70px
+
+
+    .description h6
+      color: $c-2
+      font-weight: 100
+      font-style: normal
+      font-size: 26px
+      margin-top: 1rem
+      line-height: 50px
+
+    .section-right
+      padding: 1rem 0 1rem 0
+
+      .label-heading a
+        background-color: $c-secondary
+        border: 1px solid $c-secondary
+        color: $c-4
+        margin: 0 1rem
+
+      .label-heading,
+      .season
+        display: inline-block
+        text-align: center
+
+        a
+          padding: 1.2rem 30px
+          font-size: 18px
+          line-height: 20px
+          text-align: center
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media only screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  .home-tabs-section
+    padding: 0 15px
+    .title-section
+      .section-right
+        padding-top: 6rem
+        .label-heading,
+        .season
+          a
+            font-size: 16px !important
+            padding: 1rem 15px !important
+            margin-left: 0
+      .title h2
+        padding: 0 15px
+        font-size: 38px
+        line-height: 52px
+        margin-bottom: 2rem
+
+      .description h6
+        font-size: 20px
+        margin-top: 2rem
+        line-height: 26px
+        padding: 0 15px
+
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  .home-tabs-section
+    #home-tabs
+      margin-top: 7rem
+    padding: 0 15px
+    .title-section
+      .title h2
+
+        font-size: 40px
+        line-height: 52px
+        margin-bottom: 2rem
+
+      .description h6
+        font-size: 22px
+        margin-top: 2rem
+        line-height: 26px
+
+
+@media screen and (min-width: $mobile-max-width) and (max-width: $small-screens-max-width)
+  .home-tabs-section
+    padding: 0 15px
+    .title-section
+      flex-direction: column
+      .title h2
+        font-size: 40px
+        line-height: 50px
+        text-align: center
+        margin-bottom: 2rem
+
+      .description h6
+        font-size: 20px
+        margin-top: 2rem
+        line-height: 24px
+        text-align: center
+
+      .section-right
+        width: 100%
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-around
+        .label-heading,
+        .season
+          width: 50%
+          max-width: 300px
+          display: block
+          margin-bottom: 1rem
+          a
+            width: 100%
+            margin: 0
+            display: block
+            padding: 1rem 15px
+            font-size: 16px
+            line-height: 22px
+            text-align: center
+@media screen and (max-width: $mobile-max-width)
+  .home-tabs-section
+    margin-top: 0
+    padding: 0 15px
+    .title-section
+      flex-direction: column
+      .title h2
+        font-size: 30px
+        line-height: 40px
+        text-align: center
+        margin-bottom: 2rem
+
+      .description h6
+        font-size: 18px
+        margin-top: 2rem
+        line-height: 22px
+        text-align: center
+
+      .section-right
+        width: 100%
+
+        .label-heading,
+        .season
+          width: 100%
+          display: block
+          margin-bottom: 1rem
+          a
+            width: 100%
+            margin: 0
+            display: block
+            padding: 1rem 15px
+            font-size: 16px
+            line-height: 22px
+            text-align: center

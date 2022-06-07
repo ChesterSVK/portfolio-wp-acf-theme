@@ -1,0 +1,116 @@
+.downloads-section
+  margin: 10rem 0 0 0
+  background-color: $c-1
+  padding: 12rem 0
+  .title h2
+    margin-bottom: 3rem
+    color: $c-4
+    text-align: center
+  .help
+    color: $c-4
+    text-align: center
+    font-size: 18px
+    line-height: 20px
+    margin: 2rem 0
+  .download-items
+    max-width: 1110px
+    margin: 7rem auto 4rem auto
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    .download-item
+      flex: 1 0 50%
+      max-width: 50%
+      margin-bottom: 2rem
+      .download-link
+        display: block
+        padding: 1.3rem 2rem
+        color: $c-1
+        background-color: $c-4
+        font-size: 18px
+        line-height: 140%
+        border-radius: 15px
+        max-width: 447px
+        margin: 0 auto
+        position: relative
+        &:after
+          content: ''
+          display: block
+          width: 25px
+          height: 25px
+          position: absolute
+          right: 25px
+          top: 18px
+          background-image: url("assets/icons/theme/download.svg")
+          background-position: center center
+          background-repeat: no-repeat
+          background-size: contain
+          transition: top .3s ease-in-out
+        &:hover
+          color: $c-secondary
+        &:hover:after
+          background-image: url("assets/icons/theme/download-red.svg")
+          top: 20px
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media screen and (min-width: $mobile-max-width) and (max-width: $small-screens-max-width)
+  .downloads-section
+    margin: 2rem 0 0 0
+    padding: 2rem 0
+    .title h2
+      margin-bottom: 2rem
+    .help
+      font-size: 16px
+    .download-items
+      margin: 2rem auto 2rem auto
+      padding: 0 15px
+      .download-item
+        .download-link
+          padding: 0.8rem 3rem 0.8rem 1.2rem
+          font-size: 16px
+          line-height: 100%
+          overflow: hidden
+          white-space: nowrap
+          text-overflow: ellipsis
+          &:after
+            width: 20px
+            height: 20px
+            right: 20px
+            top: 13px
+
+@media only screen and (max-width: $mobile-max-width)
+  .downloads-section
+    margin: 2rem 0 0 0
+    padding: 2rem 0
+    .title h2
+      margin-bottom: 2rem
+    .help
+      font-size: 16px
+    .download-items
+      margin: 2rem auto 2rem auto
+      padding: 0 15px
+      .download-item
+        flex: 1 0 100%
+        max-width: 100%
+        margin-bottom: 1rem
+        .download-link
+          padding: 0.8rem 3rem 0.8rem 1.2rem
+          font-size: 16px
+          line-height: 100%
+          overflow: hidden
+          white-space: nowrap
+          text-overflow: ellipsis
+          &:after
+            width: 20px
+            height: 20px
+            right: 20px
+            top: 13px
+
+
+

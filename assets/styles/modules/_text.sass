@@ -1,0 +1,77 @@
+.text-section
+  .container
+    .title
+      overflow: auto
+    .title h2
+      text-align: center
+    .page-content
+      &.narrow
+        max-width: 950px
+        margin: 0 auto
+      .aligncenter
+        margin: 0 auto
+        display: block
+      .alignright
+        margin: 0 0 0 auto
+        display: block
+      .alignleft
+        margin: 0 auto 0 0
+        display: block
+
+.page-content
+  &.narrow
+    max-width: 950px
+    margin: 0 auto
+  .aligncenter
+    margin: 0 auto
+    display: block
+  .alignright
+    margin: 0 0 0 auto
+    display: block
+  .alignleft
+    margin: 0 auto 0 0
+    display: block
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  .text-section
+    padding: 0 30px
+    .container
+      .title h2
+        margin-bottom: 4rem
+      .page-content
+        img
+          margin-bottom: 1rem
+        &.narrow
+          max-width: 600px
+@media screen and (min-width: $tablet-max-width) and (max-width: $small-screens-max-width)
+  .text-section
+    padding: 0 30px
+    .container
+      .title h2
+        margin-bottom: 3rem
+      .page-content
+        img
+          margin-bottom: 1rem !important
+        &.narrow
+          max-width: 500px
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .text-section
+    padding: 0 15px
+    .container
+      .title h2
+        margin-bottom: 2rem
+  .page-content
+    img
+      margin-bottom: 1rem !important
+@media screen and (max-width: $mobile-max-width)
+  .text-section
+    padding: 0 15px
+    .container
+      .title h2
+        margin-bottom: 2rem
+  .page-content
+    img
+      margin-bottom: 1rem !important

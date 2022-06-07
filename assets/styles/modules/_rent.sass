@@ -1,0 +1,218 @@
+.rent-section
+  padding-top: 5rem
+  .container
+    .content
+      margin-bottom: 4rem
+      h2
+        margin-bottom: 5rem
+        font-family: SamoSansProBold
+        font-style: normal
+        font-weight: bold
+        font-size: 36px
+        line-height: 40px
+      h3
+        font-size: 36px
+        line-height: 40px
+      h4
+        font-size: 18px
+        line-height: 40px
+        color: $c-secondary
+        font-family: SamoSansProMedium
+        font-style: normal
+    .contacts-row
+      padding: 5rem 0
+      position: relative
+      max-width: 1250px
+      margin: 7rem auto
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      align-content: stretch
+      justify-content: center
+      align-items: stretch
+      box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.12)
+      &:before
+        position: absolute
+        top: -94px
+        left: 0
+        right: 0
+        content: ''
+        margin: 3rem auto
+        display: block
+        width: 24px
+        height: 24px
+        background-image: url("assets/icons/theme/arrow-down.svg")
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+      .contact-item
+        flex: 1 0 33%
+        max-width: 33%
+        font-weight: normal
+        font-size: 18px
+        line-height: 40px
+        text-align: center
+        border-right: 1px solid #F3F3F3
+        padding: 0 7rem
+        transition: color .3s ease-in-out
+        color: $c-1
+        &:last-child
+          border: 0
+        &:hover
+          color: $c-secondary
+        img
+          display: block
+          max-width: 50px
+          text-align: center
+          margin: 0 auto
+          margin-bottom: 2rem
+
+    .gallery-row > div
+      text-align: center
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      align-content: center
+      justify-content: space-evenly
+      align-items: stretch
+      max-width: 1200px
+      margin: 0 auto
+      padding: 0 0 13rem 0
+      .image-wrapper
+        flex: 1 0 33%
+        max-width: 33%
+        padding: 5px
+        &:hover
+          cursor: pointer
+        &:first-child
+          padding-left: 0
+        &:last-child
+          padding-right: 0
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  .rent-section
+    .container
+      .content
+        h2
+          font-size: 32px
+@media screen and (min-width: $tablet-max-width) and (max-width: $small-screens-max-width)
+  .rent-section
+    padding-top: 2rem
+    .container
+      .content
+        margin-bottom: 5rem
+        h2
+          margin-bottom: 2rem
+      .contacts-row
+        padding: 2rem 0
+        position: relative
+        margin: 2rem auto
+        &:before
+          top: -54px
+          margin: 1rem auto
+          width: 24px
+          height: 24px
+        .contact-item
+          font-size: 12px
+          line-height: 20px
+          margin-bottom: 1rem
+          padding: 0 1rem
+          img
+            margin-bottom: 1rem
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .rent-section
+    padding-top: 2rem
+    .container
+      .content
+        margin-bottom: 4rem
+        h2
+          margin-bottom: 2rem
+          font-size: 22px
+          line-height: 26px
+        h3
+          font-size: 20px
+          line-height: 24px
+        h4
+          font-size: 18px
+          line-height: 22px
+      .contacts-row
+        padding: 2rem 0
+        position: relative
+        margin: 2rem auto
+        &:before
+          top: -54px
+          margin: 1rem auto
+          width: 24px
+          height: 24px
+        .contact-item
+          font-size: 12px
+          line-height: 20px
+          margin-bottom: 1rem
+          padding: 0 1rem
+          img
+            margin-bottom: 1rem
+
+      .gallery-row
+        flex-direction: column
+        padding: 0 0 4rem 0
+        .gallery-item
+          flex: 1 0 100%
+          max-width: 100%
+          width: 100%
+          padding: 0 15px !important
+          margin-bottom: 1rem
+
+
+@media screen and (max-width: $mobile-max-width)
+  .rent-section
+    padding-top: 2rem
+    .container
+      .content
+        margin-bottom: 4rem
+        h2
+          margin-bottom: 2rem
+          font-size: 22px
+          line-height: 26px
+        h3
+          font-size: 20px
+          line-height: 24px
+        h4
+          font-size: 18px
+          line-height: 22px
+      .contacts-row
+        padding: 2rem 0
+        position: relative
+        margin: 2rem auto
+        flex-direction: column
+        &:before
+          top: -54px
+          margin: 1rem auto
+          width: 24px
+          height: 24px
+        .contact-item
+          flex: 1 0 100%
+          max-width: 100%
+          width: 100%
+          font-size: 16px
+          line-height: 20px
+          margin-bottom: 2rem
+          padding: 0 2rem
+          img
+            margin-bottom: 1rem
+
+      .gallery-row
+        flex-direction: column
+        padding: 0 0 4rem 0
+        .gallery-item
+          flex: 1 0 100%
+          max-width: 100%
+          width: 100%
+          padding: 0 15px !important
+          margin-bottom: 1rem

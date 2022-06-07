@@ -1,0 +1,255 @@
+.contact-section
+  .contact-banner
+    position: relative
+    overflow: hidden
+    height: 75vh
+    img
+      position: absolute
+      z-index: -1
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      margin: 0 auto
+      object-fit: cover
+  .container
+    max-width: 1200px
+    margin: 0 auto
+    margin-top: -35vh
+    .title h2
+      color: $c-4
+      text-transform: uppercase
+      padding-left: 3rem
+      margin-bottom: 120px
+      font-size: 46px
+    .contact-row
+      box-shadow: 0px 16px 22px rgba(0, 0, 0, 0.15)
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-around
+      align-items: stretch
+      background-color: $c-4
+
+      h3
+        font-weight: 600
+        font-size: 30px
+        line-height: 33px
+        font-family: 'SamoSansProBold'
+        margin-bottom: 2rem
+
+
+      .contact-info,
+      .contact-form
+        padding: 5rem 4rem 1rem 4rem
+        flex: 1 0 50%
+        max-width: 50%
+        width: 100%
+      .contact-info
+        background-color: $c-secondary
+        color: $c-4
+        h4
+          font-family: 'SamoSansProBold'
+          font-weight: bold
+          font-size: 22px
+          line-height: 50px
+        p
+          font-weight: 500
+          font-size: 18px
+          line-height: 28px
+          margin: 0
+
+        a
+          display: inline-block
+          color: $c-4
+          margin-right: 1rem
+        a:not(.style-1)
+          &:hover
+            opacity: .8
+
+      .contact-form
+        ::placeholder
+          opacity: .6
+        ::-ms-input-placeholder
+          opacity: .6
+        :-ms-input-placeholder
+          opacity: .6
+
+        p
+          margin: 0
+        h3
+          text-align: center
+        .wpcf7
+          max-width: 370px
+          margin: 0 auto
+
+          input, textarea
+            width: 100%
+            border: 0
+            border-bottom: 1px solid #C9C9C9
+            padding: 1rem
+            font-size: 18px
+            transition: .3s ease-in-out
+            outline: 0
+            &:focus, &:active
+              border-bottom: 1px solid #A32035
+
+          textarea
+            min-height: 70px
+          label.acceptance
+            margin: 1rem 0
+            display: block
+            position: relative
+            padding-left: 3rem
+            span.acceptance
+              position: absolute
+              left: 0
+              top: 2px
+              input[type="checkbox"]
+                border: 1px solid #000
+                width: 20px
+                height: 20px
+          input[type="submit"]
+            background: linear-gradient(90deg, #A32035 0%, #D63D55 100%)
+            box-shadow: 0px 20px 32px rgba(0, 0, 0, 0.17)
+            font-style: normal
+            font-weight: bold
+            font-size: 18px
+            line-height: 100%
+            color: $c-4
+            margin: 1rem auto
+            padding: 1rem 3rem
+            width: 100%
+            display: inline-block
+            transition: 0.3s ease-in-out
+
+            &:not(:disabled):hover
+              background: linear-gradient(90deg, #A32035 100%, #D63D55 100%)
+              cursor: pointer
+              box-shadow: none
+              transform: scale(0.99)
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Responsivity
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (min-width: $tablet-max-width) and (max-width: $small-screens-max-width)
+  .contact-section
+    .contact-banner
+      height: 200px
+    .container
+      margin-top: -100px
+      .title h2
+        text-align: center
+        padding-left: 0
+        margin-bottom: 20px
+        font-size: 30px
+      .contact-row
+        h3
+          font-size: 24px
+          line-height: 28px
+          margin-bottom: 1rem
+
+@media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width)
+  .contact-section
+    .contact-banner
+      height: 150px
+    .container
+      margin-top: -80px
+      .title h2
+        text-align: center
+        padding-left: 0
+        margin-bottom: 20px
+        font-size: 28px
+      .contact-row
+        h3
+          font-size: 22px
+          line-height: 26px
+          margin-bottom: 1rem
+        .contact-info,
+        .contact-form
+          padding: 4rem 15px 0 15px
+          flex: 1 0 50%
+          max-width: 50%
+          width: 50%
+        .contact-info
+          text-align: center
+          h4
+            font-size: 18px
+            line-height: 22px
+          p
+            font-size: 16px
+            line-height: 20px
+          a
+            margin-right: 10px
+          input, textarea
+            padding: .5rem
+            font-size: 16px
+          textarea
+            min-height: 50px
+          label.acceptance
+            margin: 1rem 0
+            padding-left: 2rem
+            span.acceptance
+              left: 0
+              top: 2px
+              input[type="checkbox"]
+                width: 15px
+                height: 15px
+          input[type="submit"]
+            font-size: 16px
+            margin: 15px auto
+            padding: 1rem
+
+@media screen and (max-width: $mobile-max-width)
+  .contact-section
+    .contact-banner
+      height: 100px
+    .container
+      margin-top: -50px
+      .title h2
+        text-align: center
+        padding-left: 0
+        margin-bottom: 20px
+        font-size: 28px
+      .contact-row
+        flex-direction: column
+        h3
+          font-size: 22px
+          line-height: 26px
+          margin-bottom: 1rem
+        .contact-info,
+        .contact-form
+          padding: 3rem 15px
+          flex: 1 0 100%
+          max-width: 100%
+          width: 100%
+        .contact-info
+          text-align: center
+          h4
+            font-size: 18px
+            line-height: 22px
+          p
+            font-size: 16px
+            line-height: 20px
+          a
+            margin-right: 10px
+          input, textarea
+            padding: .5rem
+            font-size: 16px
+          textarea
+            min-height: 50px
+          label.acceptance
+            margin: 1rem 0
+            padding-left: 2rem
+            span.acceptance
+              left: 0
+              top: 2px
+              input[type="checkbox"]
+                width: 15px
+                height: 15px
+          input[type="submit"]
+            font-size: 16px
+            margin: 15px auto
+            padding: 1rem

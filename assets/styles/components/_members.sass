@@ -1,0 +1,195 @@
+.members-filter-category
+  flex-wrap: wrap
+  list-style: none !important
+  align-items: center
+  margin: 3rem 0
+  padding: 0 !important
+  display: flex
+  flex-direction: row
+  justify-content: center
+  li.member-filter-item
+    border-right: 1px solid $c-1
+    margin: 0 0 1rem 0
+    padding: 0 .7rem
+    text-align: center
+    font-size: 14px
+    line-height: 24px
+    color: $c-1 !important
+    transition: color .3s ease-in-out
+    &:last-child
+      border: 0
+    &:hover
+      cursor: pointer
+      color: $c-secondary !important
+    &.current-filter
+      color: $c-secondary !important
+
+.member-single
+  article.type-member
+    max-width: 300px
+    margin: 0 auto
+    margin-bottom: 4rem
+    .member-info
+      .member-image
+        background: #0f0f0f
+        border-bottom: 1px solid $c-secondary
+        height: 325px
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+          object-position: top
+      .member-header
+        height: 140px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: stretch
+        flex-wrap: nowrap
+        background-color: #0F0F0F
+        color: $c-4
+        padding: 3rem 1rem
+        .title
+          font-style: normal
+          font-weight: bold
+          font-size: 22px
+          line-height: 32px
+          text-align: center
+          margin-bottom: 1rem
+        .member-meta
+          text-align: center
+          color: $c-secondary
+
+.list-members-section
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: stretch
+  justify-content: space-around
+  article.type-member
+    flex: 1 0 31%
+    max-width: 31%
+    margin-bottom: 4rem
+    .member-info
+      .member-image
+        background: #0f0f0f
+        border-bottom: 1px solid $c-secondary
+        height: 325px
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+          object-position: top
+      .member-header
+        height: 140px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: stretch
+        flex-wrap: nowrap
+        background-color: #0F0F0F
+        color: $c-4
+        padding: 3rem 1rem
+        .title
+          font-style: normal
+          font-weight: bold
+          font-size: 22px
+          line-height: 32px
+          text-align: center
+          margin-bottom: 1rem
+        .member-meta
+          text-align: center
+          color: $c-secondary
+
+@media screen and (min-width: $small-screens-max-width) and (max-width: $notebook-max-width)
+  .list-members-section article.type-member .member-info .member-header .title
+    font-size: 18px
+  .members-filter-category
+    justify-content: center
+@media screen and (min-width: $mobile-max-width) and (max-width: $small-screens-max-width)
+  .members-filter-category
+    margin: 2rem 0
+    li.member-filter-item
+      border-right: 1px solid $c-1
+      margin: 0
+      flex: 1 0 25%
+      max-width: 25%
+      line-height: 15px
+      margin-bottom: 0.5rem
+      min-height: 25px
+      &:nth-child(4n)
+        border: 0
+  .member-single
+    article.type-member
+      margin-bottom: 2rem
+      .member-info
+        .member-image
+          height: 255px
+        .member-header
+          height: 80px
+          padding: 2rem 1rem
+          .title
+            font-size: 18px
+            line-height: 22px
+            margin-bottom: .2rem
+          .member-meta
+            font-size: 14px
+  .list-members-section
+    article.type-member
+      flex: 1 0 50%
+      max-width: 50%
+      margin-bottom: 2rem
+      .member-info
+        .member-image
+          height: 255px
+        .member-header
+          height: 80px
+          padding: 2rem 1rem
+          .title
+            font-size: 16px
+            line-height: 22px
+            margin-bottom: .2rem
+          .member-meta
+            font-size: 14px
+@media only screen and (max-width: $mobile-max-width)
+  .members-filter-category
+    margin: 2rem 0
+    li.member-filter-item
+      border-right: 1px solid $c-1
+      margin: 0
+      flex: 1 0 33%
+      max-width: 33%
+      line-height: 15px
+      margin-bottom: 0.5rem
+      min-height: 25px
+      &:nth-child(3n)
+        border: 0
+  .member-single
+    article.type-member
+      margin-bottom: 2rem
+      .member-info
+        .member-image
+          height: 225px
+        .member-header
+          height: 100px
+          padding: 2rem 1rem
+          .title
+            font-size: 18px
+            line-height: 22px
+            margin-bottom: .5rem
+  .list-members-section
+    flex-direction: column
+    article.type-member
+      flex: 1 0 100%
+      max-width: 100%
+      margin-bottom: 2rem
+      .member-info
+        .member-image
+          height: 225px
+        .member-header
+          height: 100px
+          padding: 2rem 1rem
+          .title
+            font-size: 18px
+            line-height: 22px
+            margin-bottom: 1rem
